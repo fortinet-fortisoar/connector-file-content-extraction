@@ -13,18 +13,22 @@ from tika import translate
 from tika import config as tika_config
 
 logger = get_logger('text_extractor')
-#logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.DEBUG)
 
 #const
 TMP_PATH = '/tmp/'
 CONNECTOR_DIR = os.path.dirname(os.path.realpath(__file__))
 TIKA_SERVER_PATH = "/opt/cyops-search/bin/tika-server.jar"
+TIKA_LOGGING_DIR = '/var/log/cyops/cyops-integrations/file-content-extraction'
 LANGUAGE_KEYS = CONNECTOR_DIR + '/language-keys'
 
 
 def _set_env(config):
     ''' Set TIKA_SERVER_JAR env for online or offline modes '''
     try:
+        if not os.path.exists(TIKA_LOGGING_DIR):
+            os.makedirs(TIKA_LOGGING_DIR)
+        os.environ['TIKA_LOG_PATH'] = TIKA_LOGGING_DIR
         os.environ['TIKA_TRANSLATOR'] = 'org.apache.tika.language.translate.GoogleTranslator'
         if config.get('offline_mode') == True:
             os.environ['TIKA_SERVER_JAR'] = TIKA_SERVER_PATH
