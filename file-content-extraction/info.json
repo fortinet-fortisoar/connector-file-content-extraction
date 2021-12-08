@@ -10,18 +10,7 @@
   "icon_small_name": "small_icon.png",
   "icon_large_name": "large_icon.png",
   "configuration": {
-    "fields": [
-      {
-        "title": "Offline Mode (No Internet)",
-        "required": false,
-        "editable": true,
-        "visible": true,
-        "type": "checkbox",
-        "name": "offline_mode",
-        "value": true,
-        "tooltip": "Offline mode: Uses the built-in engine version, Online Mode: Gets the latest version from the net"
-      }
-    ]
+    "fields": []
   },
   "operations": [
     {

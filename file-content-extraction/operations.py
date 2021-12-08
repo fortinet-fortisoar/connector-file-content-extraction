@@ -1,52 +1,27 @@
 from connectors.core.connector import get_logger, ConnectorError
-from connectors.cyops_utilities.builtins import download_file_from_cyops
-from connectors.cyops_utilities.builtins import extract_artifacts
-
+from connectors.cyops_utilities.builtins import download_file_from_cyops, extract_artifacts, calculate_hashes
 import os
 import logging
-import tika
 import json
-import tika.tika
-from tika import parser
-from tika import language
-from tika import translate
-from tika import config as tika_config
 
-logger = get_logger('text_extractor')
-logger.setLevel(logging.DEBUG)
 
-#const
+logger = get_logger('file-content-extraction')
+logger.setLevel(logging.WARNING)
+
+#const/imports
 TMP_PATH = '/tmp/'
-CONNECTOR_DIR = os.path.dirname(os.path.realpath(__file__))
-TIKA_SERVER_PATH = "/opt/cyops-search/bin/tika-server.jar"
-TIKA_LOGGING_DIR = '/var/log/cyops/cyops-integrations/file-content-extraction'
-LANGUAGE_KEYS = CONNECTOR_DIR + '/language-keys'
-
-
-def _set_env(config):
-    ''' Set TIKA_SERVER_JAR env for online or offline modes '''
-    try:
-        if not os.path.exists(TIKA_LOGGING_DIR):
-            os.makedirs(TIKA_LOGGING_DIR)
-        os.environ['TIKA_LOG_PATH'] = TIKA_LOGGING_DIR
-        os.environ['TIKA_TRANSLATOR'] = 'org.apache.tika.language.translate.GoogleTranslator'
-        if config.get('offline_mode') == True:
-            os.environ['TIKA_SERVER_JAR'] = TIKA_SERVER_PATH
-            logger.debug("Offline Mode, using local Tika file: {}".format(os.environ['TIKA_SERVER_JAR']))
-        else:
-            if os.environ.get('TIKA_SERVER_JAR') is not None:
-                del os.environ['TIKA_SERVER_JAR']
-            #TODO: implement language related actions
-            tika.tika.TikaServerClasspath = LANGUAGE_KEYS
-            logger.debug("Online Mode with language keys @: {}".format(LANGUAGE_KEYS))
-    except Exception as exp:
-        logger.error('Error Setting the Env: {}'.format(exp))
-        raise ConnectorError('Error Setting the Env: {}'.format(exp))
+TIKA_LOG_PATH = '/var/log/cyops/cyops-integrations/file-content-extraction'
+os.environ['TIKA_LOG_PATH'] = TIKA_LOG_PATH
+if not os.path.exists(TIKA_LOG_PATH):
+    os.makedirs(TIKA_LOG_PATH)
+from tika import tika as ttika
+ttika.TikaJarPath = r'/opt/cyops-search/bin'
+from tika import parser
+from tika import config as tika_config
 
 
 def extract_text(config, params):
     '''Extracts text from file and return it as utf8 or HTML formatted'''
-    _set_env(config)
     try:
         file_iri = params.get("file_iri")
         dw_file_md = download_file_from_cyops(file_iri)
@@ -72,7 +47,6 @@ def extract_indicators(config, params):
 
 def get_backend_config(config, params):
     '''Get Tika Server Attr'''
-    _set_env(config)
     try:
         verbose_config = params.get("verbose_config")
         parsers = json.loads(tika_config.getParsers())
@@ -87,7 +61,22 @@ def get_backend_config(config, params):
         raise ConnectorError('Error Reading Engine Config: {}'.format(exp))
 
 def _check_health(config):
-    _set_env(config)
+    '''Computes tika's jar md5 hashcode'''
+
+    tika_jar = '/opt/cyops-search/bin/tika-server.jar'
+    tika_md5_file = '/opt/cyops-search/bin/tika-server.jar.md5'
+    try:
+        # Tika hashcode
+        tika_md5 = calculate_hashes(tika_jar)['md5']
+        if not os.path.exists(tika_md5_file):
+            with open(tika_md5_file, 'w') as f:
+                f.write(tika_md5)
+
+        logger.debug("Offline Mode with logging dir at: {}".format(os.environ['TIKA_LOG_PATH']))
+
+    except Exception as exp:
+        logger.error('Error initiating local engine: {}'.format(exp))
+        raise ConnectorError('Error initiating local engine {}'.format(exp))     
 
 operations = {
     'extract_text': extract_text,
