@@ -1,0 +1,108 @@
+{
+  "name": "file-content-extraction",
+  "label": "File Content Extraction",
+  "version": "1.0.0",
+  "description": "Utility to Extract Text, Artifacts and Metadata from almost any file",
+  "publisher": "Community",
+  "cs_approved": false,
+  "cs_compatible": true,
+  "category": "utilities",
+  "icon_small_name": "small_icon.png",
+  "icon_large_name": "large_icon.png",
+  "configuration": {
+    "fields": []
+  },
+  "operations": [
+    {
+      "description": "Extract Text and Metadata from file",
+      "operation": "extract_text",
+      "annotation": "extract_text",
+      "title": "Extract Text",
+      "parameters": [
+        {
+          "title": "File IRI",
+          "name": "file_iri",
+          "type": "text",
+          "visible": true,
+          "editable": true,
+          "required": true
+        },
+        {
+          "title": "Set Output Format to XHTML",
+          "name": "html_output_format",
+          "type": "checkbox",
+          "value": false,
+          "visible": true,
+          "editable": true,
+          "required": false,
+          "tooltip": "If Set, the extracted text will be formatted in XHTML"
+        }
+      ],
+      "output_schema": {
+        "metadata": {},
+        "extracted_text": ""
+      },
+      "enabled": true
+    },
+    {
+      "description": "Extract Artifacts From File",
+      "operation": "extract_indicators",
+      "annotation": "extract_indicators",
+      "title": "Extract Artifacts",
+      "parameters": [
+        {
+          "title": "File IRI",
+          "name": "file_iri",
+          "type": "text",
+          "visible": true,
+          "editable": true,
+          "required": true
+        }
+      ],
+      "output_schema": {
+        "extraction_result": {
+          "IP": "",
+          "CVE": "",
+          "MD5": "",
+          "URL": "",
+          "Host": "",
+          "SHA1": "",
+          "Email": "",
+          "SHA256": "",
+          "results": "",
+          "Filename":"",
+          "Filepath":"",
+          "Registry": "",
+          "unified_result": "",
+          "whitelisted_results":""
+        },
+        "status": ""
+      },
+      "enabled": true
+    },    
+    {
+      "description": "Get Extraction Backend Configuration Details",
+      "operation": "get_backend_config",
+      "annotation": "get_backend_config",
+      "title": "Get Backend Config",
+      "parameters": [
+        {
+          "title": "Verbose",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "type": "checkbox",
+          "name": "verbose_config",
+          "value": false,
+          "tooltip": "Fetch verbose details"
+        }
+      ],
+      "output_schema": {
+        "Parsers": "",
+        "MimeTypes": "",
+        "Detectors": ""
+    },
+      "enabled": true
+    }
+  ]
+}
