@@ -67,8 +67,8 @@ def _check_health(config):
     tika_md5_file = '/opt/cyops-search/bin/tika-server.jar.md5'
     try:
         # Tika hashcode
-        tika_md5 = calculate_hashes(tika_jar)['md5']
         if not os.path.exists(tika_md5_file):
+            tika_md5 = calculate_hashes(tika_jar)['md5']
             with open(tika_md5_file, 'w') as f:
                 f.write(tika_md5)
 
