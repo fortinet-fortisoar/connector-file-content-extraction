@@ -6,13 +6,13 @@
       "name": "Sample - File Content Extraction - 1.0.0",
       "description": "Sample playbooks for \"File Content Extraction\" connector. If you are planning to use any of the sample playbooks in your environment, ensure that you clone those playbooks and move them to a different collection, since the sample playbook collection gets deleted during connector upgrade and delete.",
       "visible": true,
-      "image": "/api/3/images/bd02616e-e650-4ac6-922d-abfa329c3581",
+      "image": "/api/3/images/781c6d11-ac68-4b26-85f9-13b65e5c36a4",
       "uuid": "2ecf139d-2979-4658-a954-90f02bc9e93d",
-      "id": 108,
+      "id": 109,
       "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-      "createDate": 1640612294,
+      "createDate": 1640688001,
       "modifyUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-      "modifyDate": 1640612294,
+      "modifyDate": 1640688001,
       "recordTags": [],
       "workflows": [
         {
@@ -22,7 +22,7 @@
           "aliasName": null,
           "tag": null,
           "description": "Get The Backend Configuration Details",
-          "isActive": true,
+          "isActive": false,
           "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
@@ -45,7 +45,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "uuid": "2980885a-595e-4847-aa36-020879a7b9f2",
-              "id": 5375
+              "id": 5397
             },
             {
               "@type": "WorkflowStep",
@@ -71,7 +71,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "uuid": "4ec5928d-4f86-4e43-8642-ebadde48a281",
-              "id": 5376
+              "id": 5398
             },
             {
               "@type": "WorkflowStep",
@@ -95,7 +95,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
               "uuid": "94da05b0-e89e-4436-b7ec-6a9dffcfc7ab",
-              "id": 5377
+              "id": 5399
             }
           ],
           "routes": [
@@ -123,11 +123,11 @@
           "recordTags": [
             "file-content-extraction"
           ],
-          "id": 1258,
+          "id": 1263,
           "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "createDate": 1640612294,
-          "modifyUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "modifyDate": 1640612294,
+          "createDate": 1640688001,
+          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
+          "modifyDate": 1640691685,
           "owners": [],
           "isPrivate": false
         },
@@ -138,7 +138,7 @@
           "aliasName": null,
           "tag": null,
           "description": "Extract text and Meta data from MS Office, PDF and other file types",
-          "isActive": true,
+          "isActive": false,
           "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
@@ -172,7 +172,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
               "uuid": "1eec2a56-a5f9-46a6-a7c8-01e3bff2001a",
-              "id": 5378
+              "id": 5400
             },
             {
               "@type": "WorkflowStep",
@@ -225,7 +225,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "uuid": "ea6affff-6836-4c4a-a77e-3e816de9317d",
-              "id": 5379
+              "id": 5401
             },
             {
               "@type": "WorkflowStep",
@@ -239,7 +239,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "uuid": "f11bd301-3bd2-4906-af12-1950d8c567ba",
-              "id": 5380
+              "id": 5402
             }
           ],
           "routes": [
@@ -267,11 +267,11 @@
           "recordTags": [
             "file-content-extraction"
           ],
-          "id": 1259,
+          "id": 1264,
           "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "createDate": 1640612294,
-          "modifyUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "modifyDate": 1640612294,
+          "createDate": 1640688001,
+          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
+          "modifyDate": 1640691685,
           "owners": [],
           "isPrivate": false
         },
@@ -282,7 +282,7 @@
           "aliasName": null,
           "tag": null,
           "description": "Extract text and Meta data from MS Office, PDF and other file types",
-          "isActive": true,
+          "isActive": false,
           "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
@@ -305,7 +305,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "uuid": "7b1cb3bf-6967-4f98-b12c-577fbe7ea5b8",
-              "id": 5381
+              "id": 5403
             },
             {
               "@type": "WorkflowStep",
@@ -329,7 +329,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
               "uuid": "881516b0-0e0f-49ab-ba47-95c6fac0e910",
-              "id": 5382
+              "id": 5404
             },
             {
               "@type": "WorkflowStep",
@@ -382,7 +382,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "uuid": "a0e42486-b942-49cb-943c-e0679b40e3e1",
-              "id": 5383
+              "id": 5405
             }
           ],
           "routes": [
@@ -410,11 +410,11 @@
           "recordTags": [
             "file-content-extraction"
           ],
-          "id": 1260,
+          "id": 1265,
           "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "createDate": 1640612294,
-          "modifyUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "modifyDate": 1640612294,
+          "createDate": 1640688001,
+          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
+          "modifyDate": 1640691685,
           "owners": [],
           "isPrivate": false
         },
@@ -455,7 +455,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62",
               "uuid": "a6cea4c7-0da2-4f8a-a0e2-9f7de04b3c07",
-              "id": 5384
+              "id": 5406
             },
             {
               "@type": "WorkflowStep",
@@ -469,7 +469,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "uuid": "add59555-4c0a-41e5-9ed8-bcff87a5c2d9",
-              "id": 5385
+              "id": 5407
             },
             {
               "@type": "WorkflowStep",
@@ -483,7 +483,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "uuid": "c1181a5b-16dd-48e2-babb-9d04a58caeb4",
-              "id": 5386
+              "id": 5408
             },
             {
               "@type": "WorkflowStep",
@@ -497,7 +497,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "uuid": "d9a996d2-a3e6-4e9f-a43f-8affea49c995",
-              "id": 5387
+              "id": 5409
             }
           ],
           "routes": [
@@ -534,11 +534,11 @@
           "recordTags": [
             "file-content-extraction"
           ],
-          "id": 1261,
+          "id": 1266,
           "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "createDate": 1640612294,
+          "createDate": 1640688001,
           "modifyUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "modifyDate": 1640612294,
+          "modifyDate": 1640688001,
           "owners": [],
           "isPrivate": false
         },
@@ -583,7 +583,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
               "uuid": "1ed3848a-f5c1-451c-9910-d2db0b9f3a42",
-              "id": 5388
+              "id": 5410
             },
             {
               "@type": "WorkflowStep",
@@ -602,7 +602,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/74932bdc-b8b6-4d24-88c4-1a4dfbc524f3",
               "uuid": "3f0eb1cd-c448-46c9-b4d1-b2de07ffcd93",
-              "id": 5390
+              "id": 5411
             },
             {
               "@type": "WorkflowStep",
@@ -627,7 +627,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/b593663d-7d13-40ce-a3a3-96dece928722",
               "uuid": "7d8a8527-3612-4918-b754-8524a80c1668",
-              "id": 5391
+              "id": 5412
             },
             {
               "@type": "WorkflowStep",
@@ -644,7 +644,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "uuid": "7fe93626-1500-436f-ac39-679f633dab41",
-              "id": 5392
+              "id": 5413
             },
             {
               "@type": "WorkflowStep",
@@ -658,7 +658,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "uuid": "88edc781-d199-49de-ad68-7668b6699f6d",
-              "id": 5393
+              "id": 5414
             },
             {
               "@type": "WorkflowStep",
@@ -709,7 +709,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "uuid": "af26e67d-7790-45be-aa69-ce167cafc916",
-              "id": 5394
+              "id": 5415
             },
             {
               "@type": "WorkflowStep",
@@ -753,7 +753,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/2597053c-e718-44b4-8394-4d40fe26d357",
               "uuid": "c42ab9bc-b2b1-4424-9a42-cad51c22e0ff",
-              "id": 5395
+              "id": 5416
             },
             {
               "@type": "WorkflowStep",
@@ -771,7 +771,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "uuid": "e38d36c1-9c68-4cf7-9696-453dddfd2724",
-              "id": 5396
+              "id": 5417
             }
           ],
           "routes": [
@@ -845,11 +845,11 @@
             "Use-Case",
             "file-content-extraction"
           ],
-          "id": 1262,
+          "id": 1267,
           "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "createDate": 1640612294,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1640613132,
+          "createDate": 1640688001,
+          "modifyUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
+          "modifyDate": 1640688001,
           "owners": [],
           "isPrivate": false
         }
