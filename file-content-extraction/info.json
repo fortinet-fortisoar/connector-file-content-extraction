@@ -1,7 +1,7 @@
 {
   "name": "file-content-extraction",
   "label": "File Content Extraction",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utility to Extract Text, Artifacts and Metadata from almost any file",
   "publisher": "Community",
   "cs_approved": false,
