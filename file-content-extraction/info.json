@@ -56,7 +56,8 @@
           "type": "text",
           "visible": true,
           "editable": true,
-          "required": true
+          "required": true,
+          "tooltip": "File IRI is an attribute of a file which is in turn an attribute of an attachment or an indicator"
         }
       ],
       "output_schema": {
