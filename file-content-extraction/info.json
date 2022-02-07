@@ -3,12 +3,13 @@
   "label": "File Content Extraction",
   "version": "1.0.1",
   "description": "Utility to Extract Text, Artifacts and Metadata from almost any file",
-  "publisher": "Community",
+  "publisher": "github.com/ftnt-cse",
   "cs_approved": false,
   "cs_compatible": true,
   "category": "utilities",
   "icon_small_name": "small_icon.png",
   "icon_large_name": "large_icon.png",
+  "help_online": "https://github.com/ftnt-cse/connector-file-content-extraction/blob/develop/docs/FileContentExtractionConnectorDoc.md",
   "configuration": {
   },
   "operations": [
