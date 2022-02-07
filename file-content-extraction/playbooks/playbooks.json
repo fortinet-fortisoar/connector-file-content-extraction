@@ -3,16 +3,16 @@
   "data": [
     {
       "@type": "WorkflowCollection",
-      "name": "Sample - File Content Extraction - 1.0.0",
+      "name": "Sample - File Content Extraction - 1.0.1",
       "description": "Sample playbooks for \"File Content Extraction\" connector. If you are planning to use any of the sample playbooks in your environment, ensure that you clone those playbooks and move them to a different collection, since the sample playbook collection gets deleted during connector upgrade and delete.",
       "visible": true,
-      "image": "/api/3/images/5b3e5fa7-673f-426a-9505-5176b5a5eab5",
+      "image": "/api/3/images/6f319e63-d502-420d-b11c-f1c04c7358fc",
       "uuid": "2ecf139d-2979-4658-a954-90f02bc9e93d",
-      "id": 111,
+      "id": 234,
       "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-      "createDate": 1640761612,
+      "createDate": 1644022713,
       "modifyUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-      "modifyDate": 1640761612,
+      "modifyDate": 1644022713,
       "recordTags": [],
       "workflows": [
         {
@@ -45,7 +45,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "uuid": "2980885a-595e-4847-aa36-020879a7b9f2",
-              "id": 5439
+              "id": 14364
             },
             {
               "@type": "WorkflowStep",
@@ -71,7 +71,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "uuid": "4ec5928d-4f86-4e43-8642-ebadde48a281",
-              "id": 5440
+              "id": 14365
             },
             {
               "@type": "WorkflowStep",
@@ -83,7 +83,7 @@
                 "params": {
                   "verbose_config": true
                 },
-                "version": "1.0.0",
+                "version": "1.0.1",
                 "connector": "file-content-extraction",
                 "operation": "get_backend_config",
                 "operationTitle": "Get Backend Config",
@@ -95,7 +95,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
               "uuid": "94da05b0-e89e-4436-b7ec-6a9dffcfc7ab",
-              "id": 5441
+              "id": 14366
             }
           ],
           "routes": [
@@ -123,11 +123,11 @@
           "recordTags": [
             "file-content-extraction"
           ],
-          "id": 1272,
+          "id": 2648,
           "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "createDate": 1640761612,
+          "createDate": 1644022713,
           "modifyUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "modifyDate": 1640761612,
+          "modifyDate": 1644022713,
           "owners": [],
           "isPrivate": false
         },
@@ -160,7 +160,7 @@
                   "file_iri": "{{vars.input.records[0].file['@id']}}",
                   "html_output_format": false
                 },
-                "version": "1.0.0",
+                "version": "1.0.1",
                 "connector": "file-content-extraction",
                 "operation": "extract_text",
                 "operationTitle": "Extract Text",
@@ -172,7 +172,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
               "uuid": "1eec2a56-a5f9-46a6-a7c8-01e3bff2001a",
-              "id": 5442
+              "id": 14367
             },
             {
               "@type": "WorkflowStep",
@@ -225,7 +225,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "uuid": "ea6affff-6836-4c4a-a77e-3e816de9317d",
-              "id": 5443
+              "id": 14368
             },
             {
               "@type": "WorkflowStep",
@@ -239,7 +239,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "uuid": "f11bd301-3bd2-4906-af12-1950d8c567ba",
-              "id": 5444
+              "id": 14369
             }
           ],
           "routes": [
@@ -267,11 +267,11 @@
           "recordTags": [
             "file-content-extraction"
           ],
-          "id": 1273,
+          "id": 2649,
           "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "createDate": 1640761612,
+          "createDate": 1644022713,
           "modifyUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "modifyDate": 1640761612,
+          "modifyDate": 1644022713,
           "owners": [],
           "isPrivate": false
         },
@@ -305,7 +305,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "uuid": "7b1cb3bf-6967-4f98-b12c-577fbe7ea5b8",
-              "id": 5445
+              "id": 14370
             },
             {
               "@type": "WorkflowStep",
@@ -317,7 +317,7 @@
                 "params": {
                   "file_iri": "{{vars.input.records[0]['@id']}}"
                 },
-                "version": "1.0.0",
+                "version": "1.0.1",
                 "connector": "file-content-extraction",
                 "operation": "extract_indicators",
                 "operationTitle": "Extract Artifacts",
@@ -329,7 +329,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
               "uuid": "881516b0-0e0f-49ab-ba47-95c6fac0e910",
-              "id": 5446
+              "id": 14371
             },
             {
               "@type": "WorkflowStep",
@@ -382,7 +382,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "uuid": "a0e42486-b942-49cb-943c-e0679b40e3e1",
-              "id": 5447
+              "id": 14372
             }
           ],
           "routes": [
@@ -410,135 +410,11 @@
           "recordTags": [
             "file-content-extraction"
           ],
-          "id": 1274,
+          "id": 2650,
           "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "createDate": 1640761612,
+          "createDate": 1644022713,
           "modifyUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "modifyDate": 1640761612,
-          "owners": [],
-          "isPrivate": false
-        },
-        {
-          "@type": "Workflow",
-          "triggerLimit": null,
-          "name": "> JSON to HTML Tables",
-          "aliasName": null,
-          "tag": null,
-          "description": "Takes a list of JSON dictionaries and creates an HTML table for each",
-          "isActive": true,
-          "debug": false,
-          "singleRecordExecution": false,
-          "remoteExecutableFlag": false,
-          "parameters": [
-            "json_data"
-          ],
-          "synchronous": false,
-          "lastModifyDate": 1641121526,
-          "collection": "/api/3/workflow_collections/2ecf139d-2979-4658-a954-90f02bc9e93d",
-          "versions": [],
-          "triggerStep": "/api/3/workflow_steps/a6cea4c7-0da2-4f8a-a0e2-9f7de04b3c07",
-          "steps": [
-            {
-              "@type": "WorkflowStep",
-              "name": "Start",
-              "description": null,
-              "arguments": {
-                "step_variables": {
-                  "input": {
-                    "params": []
-                  },
-                  "list_of_lists": "[]"
-                }
-              },
-              "status": null,
-              "top": "30",
-              "left": "125",
-              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62",
-              "uuid": "a6cea4c7-0da2-4f8a-a0e2-9f7de04b3c07",
-              "id": 5448
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Configuration",
-              "description": null,
-              "arguments": {
-                "columns_per_table": "9"
-              },
-              "status": null,
-              "top": "165",
-              "left": "125",
-              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
-              "uuid": "add59555-4c0a-41e5-9ed8-bcff87a5c2d9",
-              "id": 5449
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Compute Lists of Lists",
-              "description": null,
-              "arguments": {
-                "__temp0": "{%for line in vars.input.params.json_data.items()|batch(vars.columns_per_table)%}\n{{vars.list_of_lists.append(dict(line))}}{%endfor%}"
-              },
-              "status": null,
-              "top": "300",
-              "left": "125",
-              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
-              "uuid": "c1181a5b-16dd-48e2-babb-9d04a58caeb4",
-              "id": 5450
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Compute HTML output",
-              "description": null,
-              "arguments": {
-                "data": "{%for sublist in vars.list_of_lists%}{%if sublist%}<div style=\"float:left; border:2px solid grey; margin:5px;background-color: #1b2430; color:white;font-size:16;\">\n    <h6 style=\"background:#22a6af;color:white;padding:5px;\">Metadata</h2>\n    <p style=\"padding:1px;color:white;\">{{sublist | json2html(row_fields=[], template=\"Stylized with row selection\", display=\"Vertical\", styling=false, table_style={})}}<br>\n    </p>\n</div>{%endif%}{%endfor%}"
-              },
-              "status": null,
-              "top": "435",
-              "left": "125",
-              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
-              "uuid": "d9a996d2-a3e6-4e9f-a43f-8affea49c995",
-              "id": 5451
-            }
-          ],
-          "routes": [
-            {
-              "@type": "WorkflowRoute",
-              "name": "Start -> Configuration",
-              "targetStep": "/api/3/workflow_steps/add59555-4c0a-41e5-9ed8-bcff87a5c2d9",
-              "sourceStep": "/api/3/workflow_steps/a6cea4c7-0da2-4f8a-a0e2-9f7de04b3c07",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "12480a71-9461-45d6-9158-a9af75e118c3"
-            },
-            {
-              "@type": "WorkflowRoute",
-              "name": "Compute Lists of Lists -> Compute HTML output",
-              "targetStep": "/api/3/workflow_steps/d9a996d2-a3e6-4e9f-a43f-8affea49c995",
-              "sourceStep": "/api/3/workflow_steps/c1181a5b-16dd-48e2-babb-9d04a58caeb4",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "4a37cefc-b1d9-4038-a068-7ed48e65052b"
-            },
-            {
-              "@type": "WorkflowRoute",
-              "name": "Configuration -> Compute Lists of Lists",
-              "targetStep": "/api/3/workflow_steps/c1181a5b-16dd-48e2-babb-9d04a58caeb4",
-              "sourceStep": "/api/3/workflow_steps/add59555-4c0a-41e5-9ed8-bcff87a5c2d9",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "dd294d3b-b2a4-494b-bea6-236faffe167c"
-            }
-          ],
-          "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
-          "uuid": "9b384ae8-48a0-4261-9250-3292a74b053f",
-          "recordTags": [
-            "file-content-extraction"
-          ],
-          "id": 1275,
-          "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "createDate": 1640761612,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1641121526,
+          "modifyDate": 1644022713,
           "owners": [],
           "isPrivate": false
         },
@@ -555,7 +431,7 @@
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1641125700,
+          "lastModifyDate": 1644046982,
           "collection": "/api/3/workflow_collections/2ecf139d-2979-4658-a954-90f02bc9e93d",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/af26e67d-7790-45be-aa69-ce167cafc916",
@@ -571,38 +447,21 @@
                   "file_iri": "{{vars.input.records[0].file['@id']}}",
                   "html_output_format": true
                 },
-                "version": "1.0.0",
+                "version": "1.0.1",
                 "connector": "file-content-extraction",
                 "operation": "extract_text",
                 "operationTitle": "Extract Text",
                 "pickFromTenant": false,
-                "step_variables": []
+                "step_variables": {
+                  "extraction_result": "{{vars.result.data}}"
+                }
               },
               "status": null,
               "top": "300",
               "left": "125",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
               "uuid": "1ed3848a-f5c1-451c-9910-d2db0b9f3a42",
-              "id": 5452
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Format Metadata",
-              "description": null,
-              "arguments": {
-                "arguments": {
-                  "json_data": "{{vars.extraction_result.metadata}}"
-                },
-                "apply_async": false,
-                "step_variables": [],
-                "workflowReference": "/api/3/workflows/9b384ae8-48a0-4261-9250-3292a74b053f"
-              },
-              "status": null,
-              "top": "570",
-              "left": "125",
-              "stepType": "/api/3/workflow_step_types/74932bdc-b8b6-4d24-88c4-1a4dfbc524f3",
-              "uuid": "3f0eb1cd-c448-46c9-b4d1-b2de07ffcd93",
-              "id": 5453
+              "id": 14377
             },
             {
               "@type": "WorkflowStep",
@@ -610,7 +469,8 @@
               "description": null,
               "arguments": {
                 "resource": {
-                  "description": "{{vars.input.records[0].description}}{%if 'filePreview' not in vars.input.records[0]%}\n<table>\n    <tr>\n      <td>{{vars.steps.Format_Metadata.data}}</td>\n    </tr>\n    <tr>\n        <td>\n            <hr>\n            <div style=\"float: left; flex-grow: 100; border:2px solid grey; margin:5px;background-color: #1b2430; color:white;font-size:16;\">\n                <h6 style=\"background:#bff7ff;color:black;padding:5px;\">File Preview</h2>\n                <p style=\"padding:1px;color:white;\">\n                    {{vars.extraction_result.extracted_text}}\n                </p>\n            </div>\n        </td>\n      </tr>\n  </table>\n{%endif%}"
+                  "description": "{%if 'filePreview' in vars.input.records[0]%}{{vars.input.records[0].description}}{%else%}<table style=\"width:100%\">\n<tr>\n<td>{{vars.file_attributes_html}}</td>\n</tr>\n<tr>\n<td>{{vars.file_content_html}}</td>\n</tr>\n</table>{{vars.input.records[0].description}}{%endif%}",
+                  "filePreview": "<table style=\"width: 100%;\">\n<tbody>\n<tr>\n<td>{{vars.file_attributes_html}}</td>\n</tr>\n<tr>\n<td>{{vars.file_content_html}}</td>\n</tr>\n</tbody>\n</table>"
                 },
                 "_showJson": false,
                 "operation": "Append",
@@ -623,20 +483,20 @@
                 "step_variables": []
               },
               "status": null,
-              "top": "974",
+              "top": "975",
               "left": "125",
               "stepType": "/api/3/workflow_step_types/b593663d-7d13-40ce-a3a3-96dece928722",
               "uuid": "7d8a8527-3612-4918-b754-8524a80c1668",
-              "id": 5454
+              "id": 14379
             },
             {
               "@type": "WorkflowStep",
-              "name": "Compute results",
+              "name": "Compute attributes",
               "description": null,
               "arguments": {
                 "whitelist": "{{vars.ips | union(vars.urls) |union(vars.domains)}}",
                 "alerts_iris": "{%if vars.record_data.alerts|length >0%}\n{{vars.record_data|json_query(\"alerts[].[\\\"@id\\\"]\")|flatten(levels=1)}}\n{%endif%}",
-                "extraction_result": "{{vars.steps.Extract_text.data}}",
+                "__make_attr_table": "{%for k,v in vars.extraction_result.metadata.items()%}\n{%if k in [\"Creation-Date\",\"Last-Modified\",\"subject\",\"custom:Editor\",\"custom:Email\",\"Application-Name\"]%}\n{{vars.main_file_attributes.update({k.replace('-',' ').replace('custom:',' ').capitalize():v})}}\n{%else%}\n{{vars.rest_of_file_attributes.update({k.replace('-',' ').replace('custom:',' ').capitalize():v})}}\n{%endif%}\n{%endfor%}\n{{vars.list_of_lists.append(['Main File Attributes',vars.main_file_attributes])}}\n{{vars.list_of_lists.append(['Extended File Attributes',vars.rest_of_file_attributes])}}",
                 "extracted_indicators": "{{vars.steps.Extract_text|extract_artifacts}}"
               },
               "status": null,
@@ -644,21 +504,38 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "uuid": "7fe93626-1500-436f-ac39-679f633dab41",
-              "id": 5455
+              "id": 14380
             },
             {
               "@type": "WorkflowStep",
-              "name": "Whitelist Indicators",
+              "name": "Whitelist Indicators and prep summary",
               "description": null,
               "arguments": {
+                "qq": "{{vars.main_file_attributes}}",
                 "__temp0": "{%for indicator in vars.extracted_indicators.results%}\n{%if indicator.value not in vars.whitelist%}{{vars.unified_iocs.append(indicator)}}{%endif%}\n{%endfor%}"
+              },
+              "status": null,
+              "top": "570",
+              "left": "125",
+              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+              "uuid": "88edc781-d199-49de-ad68-7668b6699f6d",
+              "id": 14381
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Compute extraction summary",
+              "description": null,
+              "arguments": {
+                "file_content_html": "<div class=\"font-size-11 ng-binding padding-bottom-sm\"><h4 style=\"background: #404142;padding: 5px;text-align: left;color: orange;background: black;\">File Content</h4></div>\n{{vars.extraction_result.extracted_text}}",
+                "extraction_summary": "{%for indicator in vars.extracted_indicators.results%}\n{%if indicator.value not in vars.whitelist%}{{vars.unified_iocs.append(indicator)}}{%endif%}\n{%endfor%}",
+                "file_attributes_html": "<div class=\"font-size-11 ng-binding padding-bottom-sm\"><h4 style=\"background: #404142;padding: 5px;text-align: left;color: orange;background: black;\">File Metadata</h4></div>\n{%for section in vars.list_of_lists%}<div style=\"float:left; border:2px solid grey; margin:5px;background-color: #1b2430; color:white;font-size:16;\"><h6 style=\"background:{{vars.table_color}};color:white;padding:5px;\">{{section.0}}</h2>    <p style=\"padding:1px;color:white;\">{{section.1 | json2html(row_fields=[], template=\"Stylized with row selection\", display=\"Vertical\", styling=false, table_style={'th':'background-color:#22a6af !important;'})}}</p></div>{%endfor%}"
               },
               "status": null,
               "top": "705",
               "left": "125",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
-              "uuid": "88edc781-d199-49de-ad68-7668b6699f6d",
-              "id": 5456
+              "uuid": "a62c1932-0720-48ff-a2ef-a57ca2b8bbd2",
+              "id": 14385
             },
             {
               "@type": "WorkflowStep",
@@ -709,7 +586,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "uuid": "af26e67d-7790-45be-aa69-ce167cafc916",
-              "id": 5457
+              "id": 14382
             },
             {
               "@type": "WorkflowStep",
@@ -719,30 +596,13 @@
                 "for_each": {
                   "item": "{{vars.unified_iocs}}",
                   "__bulk": true,
-                  "parallel": false,
-                  "condition": "",
-                  "batch_size": 100
+                  "condition": ""
                 },
                 "resource": {
-                  "tlp": {
-                    "id": 313,
-                    "@id": "/api/3/picklists/7bff95b7-6438-4b01-b23a-0fe8cb5b33d3",
-                    "icon": null,
-                    "uuid": "7bff95b7-6438-4b01-b23a-0fe8cb5b33d3",
-                    "@type": "Picklist",
-                    "color": "#FFBF00",
-                    "display": "Amber",
-                    "@context": "/api/3/contexts/Picklist",
-                    "listName": "/api/3/picklist_names/40f1345f-f679-43c0-9237-5b06edd8385f",
-                    "itemValue": "Amber",
-                    "orderIndex": 1
-                  },
                   "value": "{{vars.item.value}}",
-                  "__link": {
-                    "alerts": "{{vars.alerts_iris}}",
-                    "indicators": "{{vars.input.records[0]['@id']}}"
-                  },
-                  "__replace": "true",
+                  "alerts": "{{vars.alerts_iris}}",
+                  "__replace": "false",
+                  "indicators": "{{vars.input.records[0]['@id']}}",
                   "indicatorStatus": {
                     "id": 369,
                     "@id": "/api/3/picklists/2f5cff61-fbff-4bb3-96be-302b78a9fb47",
@@ -758,20 +618,19 @@
                   "typeofindicator": "{{('IndicatorType' | picklist(vars.item.type))['@id']}}"
                 },
                 "_showJson": false,
-                "operation": "Append",
+                "operation": "Overwrite",
                 "collection": "/api/3/upsert/indicators",
-                "__recommend": [],
                 "fieldOperation": {
-                  "recordTags": "Append"
+                  "recordTags": "Overwrite"
                 },
                 "step_variables": []
               },
               "status": null,
-              "top": "839",
+              "top": "840",
               "left": "125",
               "stepType": "/api/3/workflow_step_types/2597053c-e718-44b4-8394-4d40fe26d357",
               "uuid": "c42ab9bc-b2b1-4424-9a42-cad51c22e0ff",
-              "id": 5458
+              "id": 14383
             },
             {
               "@type": "WorkflowStep",
@@ -782,34 +641,28 @@
                 "urls": "{{globalVars.Excludelist_URLs.split(',')}}",
                 "domains": "{{globalVars.Excludelist_Domains.split(',')}}",
                 "record_data": "{{(vars.input.records[0]['@id']+'?$relationships=true')|fromIRI}}",
-                "unified_iocs": "[]"
+                "unified_iocs": "[]",
+                "list_of_lists": "[]",
+                "main_file_attributes": "{}",
+                "rest_of_file_attributes": "{}"
               },
               "status": null,
               "top": "165",
               "left": "125",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "uuid": "e38d36c1-9c68-4cf7-9696-453dddfd2724",
-              "id": 5459
+              "id": 14384
             }
           ],
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "name": "Compute results -> Format Metadata",
-              "targetStep": "/api/3/workflow_steps/3f0eb1cd-c448-46c9-b4d1-b2de07ffcd93",
-              "sourceStep": "/api/3/workflow_steps/7fe93626-1500-436f-ac39-679f633dab41",
+              "name": "Start -> Configuration",
+              "targetStep": "/api/3/workflow_steps/e38d36c1-9c68-4cf7-9696-453dddfd2724",
+              "sourceStep": "/api/3/workflow_steps/af26e67d-7790-45be-aa69-ce167cafc916",
               "label": null,
               "isExecuted": false,
-              "uuid": "0aeac041-5b46-4c69-b64c-8e33c43c8e38"
-            },
-            {
-              "@type": "WorkflowRoute",
-              "name": "Format Metadata -> Whitelist Indicators",
-              "targetStep": "/api/3/workflow_steps/88edc781-d199-49de-ad68-7668b6699f6d",
-              "sourceStep": "/api/3/workflow_steps/3f0eb1cd-c448-46c9-b4d1-b2de07ffcd93",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "1fd7adb0-406c-445f-ae75-2d581049aa8f"
+              "uuid": "2c0037a8-cd19-418f-bb72-901a15c3561f"
             },
             {
               "@type": "WorkflowRoute",
@@ -822,12 +675,30 @@
             },
             {
               "@type": "WorkflowRoute",
-              "name": "Whitelist Indicators -> Create Indicators",
-              "targetStep": "/api/3/workflow_steps/c42ab9bc-b2b1-4424-9a42-cad51c22e0ff",
-              "sourceStep": "/api/3/workflow_steps/88edc781-d199-49de-ad68-7668b6699f6d",
+              "name": "Compute results -> Whitelist Indicators",
+              "targetStep": "/api/3/workflow_steps/88edc781-d199-49de-ad68-7668b6699f6d",
+              "sourceStep": "/api/3/workflow_steps/7fe93626-1500-436f-ac39-679f633dab41",
               "label": null,
               "isExecuted": false,
-              "uuid": "b8aaa6ed-2212-4681-a1e2-ba7dc075e31c"
+              "uuid": "6dfe9df6-a9e2-4173-8755-3d66c5284976"
+            },
+            {
+              "@type": "WorkflowRoute",
+              "name": "Copy  of Whitelist Indicators -> Create Indicators",
+              "targetStep": "/api/3/workflow_steps/c42ab9bc-b2b1-4424-9a42-cad51c22e0ff",
+              "sourceStep": "/api/3/workflow_steps/a62c1932-0720-48ff-a2ef-a57ca2b8bbd2",
+              "label": null,
+              "isExecuted": false,
+              "uuid": "9a1d44a5-4758-4cd8-87cf-0cb9a4781d33"
+            },
+            {
+              "@type": "WorkflowRoute",
+              "name": "Create Indicators -> Update Record",
+              "targetStep": "/api/3/workflow_steps/7d8a8527-3612-4918-b754-8524a80c1668",
+              "sourceStep": "/api/3/workflow_steps/c42ab9bc-b2b1-4424-9a42-cad51c22e0ff",
+              "label": null,
+              "isExecuted": false,
+              "uuid": "9b263386-b224-4bc4-b6f2-b4192452b0cf"
             },
             {
               "@type": "WorkflowRoute",
@@ -840,21 +711,12 @@
             },
             {
               "@type": "WorkflowRoute",
-              "name": "Create Indicators -> Update Record",
-              "targetStep": "/api/3/workflow_steps/7d8a8527-3612-4918-b754-8524a80c1668",
-              "sourceStep": "/api/3/workflow_steps/c42ab9bc-b2b1-4424-9a42-cad51c22e0ff",
+              "name": "Whitelist Indicators -> Copy  of Whitelist Indicators",
+              "targetStep": "/api/3/workflow_steps/a62c1932-0720-48ff-a2ef-a57ca2b8bbd2",
+              "sourceStep": "/api/3/workflow_steps/88edc781-d199-49de-ad68-7668b6699f6d",
               "label": null,
               "isExecuted": false,
-              "uuid": "e14c8a11-5c02-4223-bab9-39ef144d3646"
-            },
-            {
-              "@type": "WorkflowRoute",
-              "name": "Start -> Configuration",
-              "targetStep": "/api/3/workflow_steps/e38d36c1-9c68-4cf7-9696-453dddfd2724",
-              "sourceStep": "/api/3/workflow_steps/af26e67d-7790-45be-aa69-ce167cafc916",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "2c0037a8-cd19-418f-bb72-901a15c3561f"
+              "uuid": "c47c47fe-6fcc-4aee-8cb3-9796d4d1b592"
             }
           ],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
@@ -863,11 +725,11 @@
             "Use-Case",
             "file-content-extraction"
           ],
-          "id": 1276,
+          "id": 2652,
           "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "createDate": 1640761612,
+          "createDate": 1644022713,
           "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1641125700,
+          "modifyDate": 1644046982,
           "owners": [],
           "isPrivate": false
         }
@@ -877,18 +739,18 @@
   "macros": [
     {
       "name": "Excludelist_IPs",
-      "value": "8.8.8.8,10.1.1.2,151.205.102.42,10.0.1.1",
+      "value": "8.8.8.8,10.1.1.2",
       "default_value": "8.8.8.8,10.1.1.2"
     },
     {
       "name": "Excludelist_URLs",
-      "value": "https://www.google.com,https://mail.yahoo.com/login.html,https://www.office.com/",
-      "default_value": "https://www.google.com,https://mail.yahoo.com/login.html,https://www.office.com/"
+      "value": "https://www.google.com,https://mail.yahoo.com/login.html,https://www.office.com/,http://www.w3.org/1999/xhtml",
+      "default_value": "https://www.google.com,https://mail.yahoo.com/login.html,https://www.office.com/,"
     },
     {
       "name": "Excludelist_Domains",
       "value": "google.com,yahoo.com,fortinet.net,cybersponse.com,gmail.com,outlook.com,microsoft.com,fortielab.com",
-      "default_value": "google.com,yahoo.com,fortinet.net,cybersponse.com,gmail.com,outlook.com,microsoft.com,fortielab.com"
+      "default_value": "google.com,yahoo.com,fortinet.net,cybersponse.com,gmail.com,outlook.com,microsoft.com"
     }
   ],
   "exported_tags": [
