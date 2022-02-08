@@ -4,11 +4,10 @@ import os
 import logging
 import json
 
-
 logger = get_logger('file-content-extraction')
-logger.setLevel(logging.WARNING)
+#logger.setLevel(logging.WARNING) #Disable for prod
 
-#const/imports
+# Const/imports
 TMP_PATH = '/tmp/'
 TIKA_LOG_PATH = '/var/log/cyops/cyops-integrations/file-content-extraction'
 os.environ['TIKA_LOG_PATH'] = TIKA_LOG_PATH

@@ -1,9 +1,5 @@
-# File Content Extraction
- The connector uses Apache Tika to extract content and artifacts from almost any file
+# About the connector
 
-## Prerequisites
-The connector requires python tika `sudo -u nginx /opt/cyops-integrations/.env/bin/pip install -r /opt/cyops-integrations/integrations/connectors/file-content-extraction_1_0_0/requirements.txt`
+The connector uses is used to extract content, metadata and artifacts from over 1500 file types such as MS Office, PDF...etc
 
-## Usage
-
-The connector includes the playbook: `Extract and Process Text From File` which can be used with any file to extract its content, metadata and artifacts. Simply run the playbook, the result will be shown in filePreview field if your indicators module has it, otherwise the result will be added to the indicator description
+For documentation, visit [docs](docs/FileContentExtractionConnectorDoc.md)
