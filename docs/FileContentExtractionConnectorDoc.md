@@ -4,7 +4,7 @@ The connector uses is used to extract content, metadata and artifacts from over 
 
 # Version information
 
-Connector Version: 1.0.0
+Connector Version: 1.0.1
 FortiSOAR™ Version Tested on: 7.0.0
 
 Authored By: Community
