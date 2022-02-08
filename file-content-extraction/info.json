@@ -3,7 +3,7 @@
   "label": "File Content Extraction",
   "version": "1.0.1",
   "description": "Utility to Extract Text, Artifacts and Metadata from almost any file",
-  "publisher": "Fortinet Community",
+  "publisher": "Fortinet CSE",
   "supportInfo": "https://github.com/ftnt-cse",
   "cs_approved": false,
   "cs_compatible": true,
