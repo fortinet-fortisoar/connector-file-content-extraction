@@ -4,11 +4,11 @@ The connector uses is used to extract content, metadata and artifacts from over 
 
 # Version information
 
-Connector Version: 1.0.1
+Connector Version: 1.0.2
 
-FortiSOAR™ Version Tested on: 7.0.0
+FortiSOAR™ Version Tested on: 7.2.0
 
-Authored By: Community
+Authored By: Fortinet CSE
 
 Certified: No
 
@@ -53,3 +53,7 @@ The connector includes the playbook: `Extract and Process Text From File` which 
 ![](media/content_extraction.png)
 
 The Extraction should also work on `Attachments` for the input parameter is the file IRI
+
+# Change log:
+- 1.0.2:
+    - Moved Tika jar/md5 to `/opt/cyops-integrations/integrations/workspace/file-content-extraction/` to support 7.2 new connector architecture

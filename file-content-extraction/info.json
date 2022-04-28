@@ -1,7 +1,7 @@
 {
   "name": "file-content-extraction",
   "label": "File Content Extraction",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Utility to Extract Text, Artifacts and Metadata from almost any file",
   "publisher": "Fortinet CSE",
   "supportInfo": "https://github.com/ftnt-cse",
@@ -10,7 +10,7 @@
   "category": "utilities",
   "icon_small_name": "small_icon.png",
   "icon_large_name": "large_icon.png",
-  "help_online": "https://github.com/fortinet-fortisoar/connector-file-content-extraction/blob/release/1.0.1/docs/FileContentExtractionConnectorDoc.md",
+  "help_online": "https://github.com/fortinet-fortisoar/connector-file-content-extraction/blob/release/1.0.2/docs/FileContentExtractionConnectorDoc.md",
   "configuration": {
   },
   "operations": [
