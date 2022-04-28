@@ -3,16 +3,16 @@
   "data": [
     {
       "@type": "WorkflowCollection",
-      "name": "Sample - File Content Extraction - 1.0.1",
+      "name": "Sample - File Content Extraction - 1.0.2",
       "description": "Sample playbooks for \"File Content Extraction\" connector. If you are planning to use any of the sample playbooks in your environment, ensure that you clone those playbooks and move them to a different collection, since the sample playbook collection gets deleted during connector upgrade and delete.",
       "visible": true,
-      "image": "/api/3/images/6f319e63-d502-420d-b11c-f1c04c7358fc",
+      "image": "/api/3/images/9c8ec503-4f9e-471d-96db-ae80b053152b",
       "uuid": "2ecf139d-2979-4658-a954-90f02bc9e93d",
-      "id": 234,
+      "id": 282,
       "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-      "createDate": 1644022713,
+      "createDate": 1651138249,
       "modifyUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-      "modifyDate": 1644022713,
+      "modifyDate": 1651138249,
       "recordTags": [],
       "workflows": [
         {
@@ -45,7 +45,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "uuid": "2980885a-595e-4847-aa36-020879a7b9f2",
-              "id": 14364
+              "id": 16499
             },
             {
               "@type": "WorkflowStep",
@@ -71,7 +71,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "uuid": "4ec5928d-4f86-4e43-8642-ebadde48a281",
-              "id": 14365
+              "id": 16500
             },
             {
               "@type": "WorkflowStep",
@@ -95,7 +95,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
               "uuid": "94da05b0-e89e-4436-b7ec-6a9dffcfc7ab",
-              "id": 14366
+              "id": 16501
             }
           ],
           "routes": [
@@ -123,11 +123,11 @@
           "recordTags": [
             "file-content-extraction"
           ],
-          "id": 2648,
+          "id": 3194,
           "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "createDate": 1644022713,
+          "createDate": 1651138249,
           "modifyUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "modifyDate": 1644022713,
+          "modifyDate": 1651138249,
           "owners": [],
           "isPrivate": false
         },
@@ -172,7 +172,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
               "uuid": "1eec2a56-a5f9-46a6-a7c8-01e3bff2001a",
-              "id": 14367
+              "id": 16502
             },
             {
               "@type": "WorkflowStep",
@@ -225,7 +225,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "uuid": "ea6affff-6836-4c4a-a77e-3e816de9317d",
-              "id": 14368
+              "id": 16503
             },
             {
               "@type": "WorkflowStep",
@@ -239,7 +239,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "uuid": "f11bd301-3bd2-4906-af12-1950d8c567ba",
-              "id": 14369
+              "id": 16504
             }
           ],
           "routes": [
@@ -267,11 +267,11 @@
           "recordTags": [
             "file-content-extraction"
           ],
-          "id": 2649,
+          "id": 3195,
           "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "createDate": 1644022713,
+          "createDate": 1651138249,
           "modifyUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "modifyDate": 1644022713,
+          "modifyDate": 1651138249,
           "owners": [],
           "isPrivate": false
         },
@@ -305,7 +305,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "uuid": "7b1cb3bf-6967-4f98-b12c-577fbe7ea5b8",
-              "id": 14370
+              "id": 16505
             },
             {
               "@type": "WorkflowStep",
@@ -329,7 +329,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
               "uuid": "881516b0-0e0f-49ab-ba47-95c6fac0e910",
-              "id": 14371
+              "id": 16506
             },
             {
               "@type": "WorkflowStep",
@@ -382,7 +382,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "uuid": "a0e42486-b942-49cb-943c-e0679b40e3e1",
-              "id": 14372
+              "id": 16507
             }
           ],
           "routes": [
@@ -410,11 +410,11 @@
           "recordTags": [
             "file-content-extraction"
           ],
-          "id": 2650,
+          "id": 3196,
           "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "createDate": 1644022713,
+          "createDate": 1651138249,
           "modifyUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "modifyDate": 1644022713,
+          "modifyDate": 1651138249,
           "owners": [],
           "isPrivate": false
         },
@@ -461,7 +461,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
               "uuid": "1ed3848a-f5c1-451c-9910-d2db0b9f3a42",
-              "id": 14377
+              "id": 16508
             },
             {
               "@type": "WorkflowStep",
@@ -487,7 +487,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/b593663d-7d13-40ce-a3a3-96dece928722",
               "uuid": "7d8a8527-3612-4918-b754-8524a80c1668",
-              "id": 14379
+              "id": 16509
             },
             {
               "@type": "WorkflowStep",
@@ -504,7 +504,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "uuid": "7fe93626-1500-436f-ac39-679f633dab41",
-              "id": 14380
+              "id": 16510
             },
             {
               "@type": "WorkflowStep",
@@ -519,7 +519,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "uuid": "88edc781-d199-49de-ad68-7668b6699f6d",
-              "id": 14381
+              "id": 16511
             },
             {
               "@type": "WorkflowStep",
@@ -535,7 +535,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "uuid": "a62c1932-0720-48ff-a2ef-a57ca2b8bbd2",
-              "id": 14385
+              "id": 16512
             },
             {
               "@type": "WorkflowStep",
@@ -586,7 +586,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
               "uuid": "af26e67d-7790-45be-aa69-ce167cafc916",
-              "id": 14382
+              "id": 16513
             },
             {
               "@type": "WorkflowStep",
@@ -630,7 +630,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/2597053c-e718-44b4-8394-4d40fe26d357",
               "uuid": "c42ab9bc-b2b1-4424-9a42-cad51c22e0ff",
-              "id": 14383
+              "id": 16514
             },
             {
               "@type": "WorkflowStep",
@@ -651,7 +651,7 @@
               "left": "125",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "uuid": "e38d36c1-9c68-4cf7-9696-453dddfd2724",
-              "id": 14384
+              "id": 16515
             }
           ],
           "routes": [
@@ -725,11 +725,11 @@
             "Use-Case",
             "file-content-extraction"
           ],
-          "id": 2652,
+          "id": 3197,
           "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "createDate": 1644022713,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1644046982,
+          "createDate": 1651138249,
+          "modifyUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
+          "modifyDate": 1651138249,
           "owners": [],
           "isPrivate": false
         }
