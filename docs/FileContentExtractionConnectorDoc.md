@@ -4,7 +4,7 @@ The connector uses is used to extract content, metadata and artifacts from over 
 
 # Version information
 
-Connector Version: 1.0.2
+Connector Version: 1.0.3
 
 FortiSOAR™ Version Tested on: 7.2.0
 
@@ -57,3 +57,5 @@ The Extraction should also work on `Attachments` for the input parameter is the 
 # Change log:
 - 1.0.2:
     - Moved Tika jar/md5 to `/opt/cyops-integrations/integrations/workspace/file-content-extraction/` to support 7.2 new connector architecture
+- 1.0.3
+    - Downloads Tika jar from its web repo

@@ -4,6 +4,7 @@ from connectors.cyops_utilities.builtins import download_file_from_cyops, extrac
 import os
 import logging
 import json
+import requests
 
 
 logger = get_logger('file-content-extraction')
@@ -26,13 +27,12 @@ def extract_text(config, params):
             os.remove(file_path)
         return {'metadata':parsed_file['metadata'],'extracted_text':parsed_file['content']}
 
+    except requests.exceptions.HTTPError as e: 
+        logger.error('Error: File with IRI:<< {} >> does not exist'.format(file_iri))
+        raise ConnectorError('Error: File with IRI:<< {} >> does not exist'.format(file_iri))        
     except Exception as exp:
-        if 'NotFoundHttpException' in str(exp):
-            logger.error('Error: File with IRI: {} does not exist'.format(file_iri))
-            raise ConnectorError('Error: File with IRI: {} does not exist'.format(file_iri))
-        else:
-            logger.error('Error Parsing the File: {}'.format(exp))
-            raise ConnectorError('Error Parsing the File: {}'.format(exp))
+        logger.error('Error Parsing the File: {}'.format(exp))
+        raise ConnectorError('Error Parsing the File: {}'.format(exp))
 
 
 def extract_indicators(config, params):

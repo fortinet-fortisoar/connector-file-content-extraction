@@ -11,8 +11,8 @@
       "id": 282,
       "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
       "createDate": 1651138249,
-      "modifyUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-      "modifyDate": 1651138249,
+      "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
+      "modifyDate": 1653937085,
       "recordTags": [],
       "workflows": [
         {
@@ -21,14 +21,14 @@
           "name": "Get Backend Config Details",
           "aliasName": null,
           "tag": null,
-          "description": "Get The Backend Configuration Details",
+          "description": "Get the backend configuration attributes",
           "isActive": false,
           "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1638956213,
+          "lastModifyDate": 1653937068,
           "collection": "/api/3/workflow_collections/2ecf139d-2979-4658-a954-90f02bc9e93d",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/4ec5928d-4f86-4e43-8642-ebadde48a281",
@@ -126,8 +126,8 @@
           "id": 3194,
           "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
           "createDate": 1651138249,
-          "modifyUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "modifyDate": 1651138249,
+          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
+          "modifyDate": 1653937069,
           "owners": [],
           "isPrivate": false
         },
@@ -137,14 +137,14 @@
           "name": "Extract Text From File",
           "aliasName": null,
           "tag": null,
-          "description": "Extract text and Meta data from MS Office, PDF and other file types",
-          "isActive": false,
+          "description": "Extracts text and Meta data from over 1500 file types",
+          "isActive": true,
           "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1638265855,
+          "lastModifyDate": 1653937030,
           "collection": "/api/3/workflow_collections/2ecf139d-2979-4658-a954-90f02bc9e93d",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/ea6affff-6836-4c4a-a77e-3e816de9317d",
@@ -157,7 +157,7 @@
                 "name": "Text Extractor",
                 "config": "70616ece-f92a-459b-88e5-cbf1b07b37b2",
                 "params": {
-                  "file_iri": "{{vars.input.records[0].file['@id']}}",
+                  "file_iri": "{{vars.input.records[0].file['@type']}}",
                   "html_output_format": false
                 },
                 "version": "1.0.3",
@@ -270,8 +270,8 @@
           "id": 3195,
           "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
           "createDate": 1651138249,
-          "modifyUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "modifyDate": 1651138249,
+          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
+          "modifyDate": 1653937031,
           "owners": [],
           "isPrivate": false
         },
@@ -281,14 +281,14 @@
           "name": "Extract Artifacts From File",
           "aliasName": null,
           "tag": null,
-          "description": "Extract text and Meta data from MS Office, PDF and other file types",
+          "description": "Returns a dictionary of extracted artifacts from file",
           "isActive": false,
           "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1638267127,
+          "lastModifyDate": 1653936989,
           "collection": "/api/3/workflow_collections/2ecf139d-2979-4658-a954-90f02bc9e93d",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/a0e42486-b942-49cb-943c-e0679b40e3e1",
@@ -413,8 +413,8 @@
           "id": 3196,
           "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
           "createDate": 1651138249,
-          "modifyUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "modifyDate": 1651138249,
+          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
+          "modifyDate": 1653936990,
           "owners": [],
           "isPrivate": false
         },
@@ -424,14 +424,14 @@
           "name": "Extract and Process Text From File",
           "aliasName": null,
           "tag": null,
-          "description": "Extract text, indicators and Meta data from MS Office, PDF and other files",
+          "description": "Enriches Indicator with extracted text, indicators and Meta data",
           "isActive": true,
           "debug": false,
           "singleRecordExecution": false,
           "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1644046982,
+          "lastModifyDate": 1653937018,
           "collection": "/api/3/workflow_collections/2ecf139d-2979-4658-a954-90f02bc9e93d",
           "versions": [],
           "triggerStep": "/api/3/workflow_steps/af26e67d-7790-45be-aa69-ce167cafc916",
@@ -483,7 +483,7 @@
                 "step_variables": []
               },
               "status": null,
-              "top": "975",
+              "top": "840",
               "left": "125",
               "stepType": "/api/3/workflow_step_types/b593663d-7d13-40ce-a3a3-96dece928722",
               "uuid": "7d8a8527-3612-4918-b754-8524a80c1668",
@@ -508,22 +508,7 @@
             },
             {
               "@type": "WorkflowStep",
-              "name": "Whitelist Indicators and prep summary",
-              "description": null,
-              "arguments": {
-                "qq": "{{vars.main_file_attributes}}",
-                "__temp0": "{%for indicator in vars.extracted_indicators.results%}\n{%if indicator.value not in vars.whitelist%}{{vars.unified_iocs.append(indicator)}}{%endif%}\n{%endfor%}"
-              },
-              "status": null,
-              "top": "570",
-              "left": "125",
-              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
-              "uuid": "88edc781-d199-49de-ad68-7668b6699f6d",
-              "id": 16511
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Compute extraction summary",
+              "name": "Format Extracted Data",
               "description": null,
               "arguments": {
                 "file_content_html": "<div class=\"font-size-11 ng-binding padding-bottom-sm\"><h4 style=\"background: #404142;padding: 5px;text-align: left;color: orange;background: black;\">File Content</h4></div>\n{{vars.extraction_result.extracted_text}}",
@@ -531,7 +516,7 @@
                 "file_attributes_html": "<div class=\"font-size-11 ng-binding padding-bottom-sm\"><h4 style=\"background: #404142;padding: 5px;text-align: left;color: orange;background: black;\">File Metadata</h4></div>\n{%for section in vars.list_of_lists%}<div style=\"float:left; border:2px solid grey; margin:5px;background-color: #1b2430; color:white;font-size:16;\"><h6 style=\"background:{{vars.table_color}};color:white;padding:5px;\">{{section.0}}</h2>    <p style=\"padding:1px;color:white;\">{{section.1 | json2html(row_fields=[], template=\"Stylized with row selection\", display=\"Vertical\", styling=false, table_style={'th':'background-color:#22a6af !important;'})}}</p></div>{%endfor%}"
               },
               "status": null,
-              "top": "705",
+              "top": "570",
               "left": "125",
               "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
               "uuid": "a62c1932-0720-48ff-a2ef-a57ca2b8bbd2",
@@ -595,13 +580,28 @@
               "arguments": {
                 "for_each": {
                   "item": "{{vars.unified_iocs}}",
-                  "__bulk": true,
+                  "__bulk": false,
+                  "parallel": false,
                   "condition": ""
                 },
                 "resource": {
+                  "tlp": {
+                    "id": 313,
+                    "@id": "/api/3/picklists/7bff95b7-6438-4b01-b23a-0fe8cb5b33d3",
+                    "icon": null,
+                    "uuid": "7bff95b7-6438-4b01-b23a-0fe8cb5b33d3",
+                    "@type": "Picklist",
+                    "color": "#FFBF00",
+                    "display": "Amber",
+                    "@context": "/api/3/contexts/Picklist",
+                    "listName": "/api/3/picklist_names/40f1345f-f679-43c0-9237-5b06edd8385f",
+                    "itemValue": "Amber",
+                    "orderIndex": 1
+                  },
                   "value": "{{vars.item.value}}",
                   "alerts": "{{vars.alerts_iris}}",
-                  "__replace": "false",
+                  "tenant": "/api/3/tenants/b3a700f7-00be-4ef9-90c6-3c8fe6e1be63",
+                  "__replace": "true",
                   "indicators": "{{vars.input.records[0]['@id']}}",
                   "indicatorStatus": {
                     "id": 369,
@@ -620,13 +620,14 @@
                 "_showJson": false,
                 "operation": "Overwrite",
                 "collection": "/api/3/upsert/indicators",
+                "__recommend": [],
                 "fieldOperation": {
                   "recordTags": "Overwrite"
                 },
                 "step_variables": []
               },
               "status": null,
-              "top": "840",
+              "top": "705",
               "left": "125",
               "stepType": "/api/3/workflow_step_types/2597053c-e718-44b4-8394-4d40fe26d357",
               "uuid": "c42ab9bc-b2b1-4424-9a42-cad51c22e0ff",
@@ -675,15 +676,6 @@
             },
             {
               "@type": "WorkflowRoute",
-              "name": "Compute results -> Whitelist Indicators",
-              "targetStep": "/api/3/workflow_steps/88edc781-d199-49de-ad68-7668b6699f6d",
-              "sourceStep": "/api/3/workflow_steps/7fe93626-1500-436f-ac39-679f633dab41",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "6dfe9df6-a9e2-4173-8755-3d66c5284976"
-            },
-            {
-              "@type": "WorkflowRoute",
               "name": "Copy  of Whitelist Indicators -> Create Indicators",
               "targetStep": "/api/3/workflow_steps/c42ab9bc-b2b1-4424-9a42-cad51c22e0ff",
               "sourceStep": "/api/3/workflow_steps/a62c1932-0720-48ff-a2ef-a57ca2b8bbd2",
@@ -711,12 +703,12 @@
             },
             {
               "@type": "WorkflowRoute",
-              "name": "Whitelist Indicators -> Copy  of Whitelist Indicators",
+              "name": "Compute attributes -> Compute extraction summary",
               "targetStep": "/api/3/workflow_steps/a62c1932-0720-48ff-a2ef-a57ca2b8bbd2",
-              "sourceStep": "/api/3/workflow_steps/88edc781-d199-49de-ad68-7668b6699f6d",
+              "sourceStep": "/api/3/workflow_steps/7fe93626-1500-436f-ac39-679f633dab41",
               "label": null,
               "isExecuted": false,
-              "uuid": "c47c47fe-6fcc-4aee-8cb3-9796d4d1b592"
+              "uuid": "89ad2eb8-4f22-45a1-92a8-d130db2219ff"
             }
           ],
           "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
@@ -728,8 +720,8 @@
           "id": 3197,
           "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
           "createDate": 1651138249,
-          "modifyUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "modifyDate": 1651138249,
+          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
+          "modifyDate": 1653937019,
           "owners": [],
           "isPrivate": false
         }
@@ -744,12 +736,12 @@
     },
     {
       "name": "Excludelist_URLs",
-      "value": "https://www.google.com,https://mail.yahoo.com/login.html,https://www.office.com/,http://www.w3.org/1999/xhtml",
-      "default_value": "https://www.google.com,https://mail.yahoo.com/login.html,https://www.office.com/,"
+      "value": "https://www.google.com,https://mail.yahoo.com/login.html,https://www.office.com/",
+      "default_value": "https://www.google.com,https://mail.yahoo.com/login.html,https://www.office.com/"
     },
     {
       "name": "Excludelist_Domains",
-      "value": "google.com,yahoo.com,fortinet.net,cybersponse.com,gmail.com,outlook.com,microsoft.com,fortielab.com",
+      "value": "google.com,yahoo.com,fortinet.net,cybersponse.com,gmail.com,outlook.com,microsoft.com,ndari.orange-sonatel.com",
       "default_value": "google.com,yahoo.com,fortinet.net,cybersponse.com,gmail.com,outlook.com,microsoft.com"
     }
   ],
