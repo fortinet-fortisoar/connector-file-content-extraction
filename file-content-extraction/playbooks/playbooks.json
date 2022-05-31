@@ -78,7 +78,7 @@
               "name": "Get backend Config Details",
               "description": null,
               "arguments": {
-                "name": "Text Extractor",
+                "name": "File Content Extraction",
                 "config": "1600b39c-a71b-4f63-a86e-908b10f14860",
                 "params": {
                   "verbose_config": true
@@ -155,7 +155,7 @@
               "name": "Extract text",
               "description": null,
               "arguments": {
-                "name": "Text Extractor",
+                "name": "File Content Extraction",
                 "config": "70616ece-f92a-459b-88e5-cbf1b07b37b2",
                 "params": {
                   "file_iri": "{{vars.input.records[0].file['@id']}}",
@@ -311,7 +311,7 @@
               "name": "Extract Artifacts",
               "description": null,
               "arguments": {
-                "name": "Text Extractor",
+                "name": "File Content Extraction",
                 "config": "70616ece-f92a-459b-88e5-cbf1b07b37b2",
                 "params": {
                   "file_iri": "{{vars.input.records[0]['@id']}}"
@@ -440,7 +440,7 @@
               "name": "Extract text",
               "description": null,
               "arguments": {
-                "name": "Text Extractor",
+                "name": "File Content Extraction",
                 "config": "70616ece-f92a-459b-88e5-cbf1b07b37b2",
                 "params": {
                   "file_iri": "{{vars.input.records[0].file['@id']}}",
