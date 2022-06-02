@@ -5,7 +5,7 @@
   "description": "Utility to Extract Text, Artifacts and Metadata from almost any file. Internet connectivity is required for the connector to download dependent packages",
   "publisher": "Fortinet CSE",
   "supportInfo": "https://github.com/ftnt-cse",
-  "cs_approved": false,
+  "cs_approved": true,
   "cs_compatible": true,
   "category": "utilities",
   "icon_small_name": "small_icon.png",
