@@ -10,7 +10,7 @@
   "category": "utilities",
   "icon_small_name": "small_icon.png",
   "icon_large_name": "large_icon.png",
-  "help_online": "https://github.com/fortinet-fortisoar/connector-file-content-extraction/blob/release/1.0.3/docs/FileContentExtractionConnectorDoc.md",
+  "help_online": "https://docs.fortinet.com/document/fortisoar/1.0.3/file-content-extraction/285/file-content-extraction-v1-0-3",
   "configuration": {
   },
   "operations": [
