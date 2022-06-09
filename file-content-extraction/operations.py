@@ -16,6 +16,9 @@ def extract_text(config, params):
     '''Extracts text from file and return it as utf8 or HTML formatted'''
     parser, tika_config = _set_env()
     try:
+        if 'file_iri' not in params or '/api/3/files/' not in params.get('file_iri'):
+            logger.error('Error: Invalid File IRI')
+            raise ConnectorError('Error: Invalid File IRI')
         file_iri = params.get('file_iri')
         dw_file_md = download_file_from_cyops(file_iri)
         file_path = TMP_PATH + dw_file_md['cyops_file_path']
