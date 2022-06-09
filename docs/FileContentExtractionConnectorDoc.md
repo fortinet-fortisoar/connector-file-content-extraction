@@ -10,7 +10,7 @@ FortiSOAR™ Version Tested on: 7.2.0
 
 Authored By: Fortinet CSE
 
-Certified: No
+Certified: Yes
 
 # Installing the connector
 
