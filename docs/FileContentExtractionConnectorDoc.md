@@ -48,11 +48,11 @@ The following automated operations can be included in playbooks
 
 ### Note:
 
-The connector includes the playbook: `Extract and Process Text From File` which can be used with any file indicator to extract its content, metadata and artifacts as illustrated in the screenshot below:
+[File Content Extraction solution pack](https://github.com/fortinet-fortisoar/solution-pack-file-content-extraction) includes the playbook: `Extract and Process Text From File` which can be used with any file indicator to extract its content, metadata and artifacts as illustrated in the screenshot below:
 
 ![](media/content_extraction.png)
 
-The Extraction should also work on `Attachments` for the input parameter is the file IRI
+The extraction should also work on 'Attachments' when the input parameter is the file IRI.
 
 # Change log:
 - 1.0.2:
