@@ -1,7 +1,7 @@
 {
   "name": "file-content-extraction",
   "label": "File Content Extraction",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Utility to Extract Text, Artifacts and Metadata from almost any file. Internet connectivity is required for the connector to download dependent packages",
   "publisher": "Fortinet CSE",
   "supportInfo": "https://github.com/ftnt-cse",
@@ -10,7 +10,7 @@
   "category": "utilities",
   "icon_small_name": "small_icon.png",
   "icon_large_name": "large_icon.png",
-  "help_online": "https://docs.fortinet.com/document/fortisoar/1.0.3/file-content-extraction/285/file-content-extraction-v1-0-3",
+  "help_online": "",
   "configuration": {
   },
   "operations": [
@@ -21,12 +21,14 @@
       "title": "Extract Text",
       "parameters": [
         {
-          "title": "File IRI",
+          "title": "File IRI/Path",
+          "description": "File IRI is an attribute of a file which is in turn an attribute of an attachment or an indicator. Note: You can specify file name which will be taken from tmp directory.",
           "name": "file_iri",
           "type": "text",
           "visible": true,
           "editable": true,
-          "required": true
+          "required": true,
+          "tooltip": "File IRI is an attribute of a file which is in turn an attribute of an attachment or an indicator. Note: You can specify file name which will be taken from tmp directory."
         },
         {
           "title": "Set Output Format to XHTML",
@@ -52,13 +54,14 @@
       "title": "Extract Artifacts",
       "parameters": [
         {
-          "title": "File IRI",
+          "title": "File IRI/Path",
+          "description": "File IRI is an attribute of a file which is in turn an attribute of an attachment or an indicator. Note: You can specify file name which will be taken from tmp directory.",
           "name": "file_iri",
           "type": "text",
           "visible": true,
           "editable": true,
           "required": true,
-          "tooltip": "File IRI is an attribute of a file which is in turn an attribute of an attachment or an indicator"
+          "tooltip": "File IRI is an attribute of a file which is in turn an attribute of an attachment or an indicator. Note: You can specify file name which will be taken from tmp directory."
         }
       ],
       "output_schema": {
@@ -72,16 +75,16 @@
           "Email": "",
           "SHA256": "",
           "results": "",
-          "Filename":"",
-          "Filepath":"",
+          "Filename": "",
+          "Filepath": "",
           "Registry": "",
           "unified_result": "",
-          "whitelisted_results":""
+          "whitelisted_results": ""
         },
         "status": ""
       },
       "enabled": true
-    },    
+    },
     {
       "description": "Get Extraction Backend Configuration Details",
       "operation": "get_backend_config",
@@ -103,7 +106,7 @@
         "Parsers": "",
         "MimeTypes": "",
         "Detectors": ""
-    },
+      },
       "enabled": true
     }
   ]

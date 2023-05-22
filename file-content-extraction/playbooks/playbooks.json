@@ -3,7 +3,7 @@
   "data": [
     {
       "@type": "WorkflowCollection",
-      "name": "Sample - File Content Extraction - 1.0.3",
+      "name": "Sample - File Content Extraction - 1.1.0",
       "description": "Sample playbooks for \"File Content Extraction\" connector. If you are planning to use any of the sample playbooks in your environment, ensure that you clone those playbooks and move them to a different collection, since the sample playbook collection gets deleted during connector upgrade and delete.",
       "visible": true,
       "image": "/api/3/images/ffea24b7-a875-4f05-b321-b22cfe396856",
@@ -83,7 +83,7 @@
                 "params": {
                   "verbose_config": true
                 },
-                "version": "1.0.3",
+                "version": "1.1.0",
                 "connector": "file-content-extraction",
                 "operation": "get_backend_config",
                 "operationTitle": "Get Backend Config",
@@ -161,7 +161,7 @@
                   "file_iri": "{{vars.input.records[0].file['@id']}}",
                   "html_output_format": false
                 },
-                "version": "1.0.3",
+                "version": "1.1.0",
                 "connector": "file-content-extraction",
                 "operation": "extract_text",
                 "operationTitle": "Extract Text",
@@ -316,7 +316,7 @@
                 "params": {
                   "file_iri": "{{vars.input.records[0].file['@id']}}"
                 },
-                "version": "1.0.3",
+                "version": "1.1.0",
                 "connector": "file-content-extraction",
                 "operation": "extract_indicators",
                 "operationTitle": "Extract Artifacts",
