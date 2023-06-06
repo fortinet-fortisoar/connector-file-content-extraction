@@ -42,13 +42,13 @@ def extract_text(config, params, *args, **kwargs):
         raise ConnectorError('Error Parsing the File: {}'.format(exp))
 
 
-def extract_indicators(config, params):
+def extract_indicators(config, params, *args, **kwargs):
     '''Extracts artifacts from extracted text'''
-    extracted_text = extract_text(config, params)
+    extracted_text = extract_text(config, params, *args, **kwargs)
     return extract_artifacts(extracted_text)
 
 
-def get_backend_config(config, params):
+def get_backend_config(config, params, *args, **kwargs):
     '''Get Tika Server Attr'''
     parser, tika_config = _set_env()
     try:
