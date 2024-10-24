@@ -9,6 +9,7 @@ from connectors.cyops_utilities.builtins import download_file_from_cyops, extrac
 import os
 import json
 import requests
+from ioc_finder import find_iocs
 
 logger = get_logger('file-content-extraction')
 
@@ -17,7 +18,9 @@ TMP_PATH = '/tmp/'
 
 
 def extract_text(config, params, *args, **kwargs):
-    '''Extracts text from file and return it as utf8 or HTML formatted'''
+    '''
+    Extracts text from file and return it as utf8 or HTML formatted
+    '''
     parser, tika_config = _set_env()
     try:
         if params.get('file_iri') and '/api/3/files/' not in params.get('file_iri'):
@@ -46,6 +49,18 @@ def extract_indicators(config, params, *args, **kwargs):
     '''Extracts artifacts from extracted text'''
     extracted_text = extract_text(config, params, *args, **kwargs)
     return extract_artifacts(extracted_text)
+
+
+def extract_indicators_from_file(config, params, *args, **kwargs):
+    '''Extracts artifacts from extracted text'''
+    result = []
+    extracted_text = extract_text(config, params, *args, **kwargs)
+    iocs = find_iocs(extracted_text['extracted_text'])
+    for ioc_type in ['md5s', 'urls', 'ipv4s', 'ipv6s', 'sha1s', 'sha256s', 'sha512s', 'domains']:
+        ioc_values = iocs.get(ioc_type)
+        if ioc_values:
+            result.extend({'ioc_type': ioc_type, 'value': x} for x in ioc_values)
+    return result
 
 
 def get_backend_config(config, params, *args, **kwargs):
@@ -83,5 +98,6 @@ def _check_health(config):
 operations = {
     'extract_text': extract_text,
     'extract_indicators': extract_indicators,
-    'get_backend_config': get_backend_config
+    'get_backend_config': get_backend_config,
+    'extract_indicators_from_file': extract_indicators_from_file
 }

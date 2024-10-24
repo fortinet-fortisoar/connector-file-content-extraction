@@ -1,7 +1,7 @@
 {
   "name": "file-content-extraction",
   "label": "File Content Extraction",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Utility to Extract Text, Artifacts and Metadata from almost any file. Internet connectivity is required for the connector to download dependent packages",
   "publisher": "Fortinet",
   "supportInfo": "https://github.com/ftnt-cse",
@@ -84,6 +84,26 @@
         },
         "status": ""
       },
+      "enabled": true
+    },
+    {
+      "description": "Extracts artifacts from file based on the file IRI/path that you have specified.",
+      "operation": "extract_indicators_from_file",
+      "annotation": "extract_indicators_from_file",
+      "title": "Extract Artifacts From File",
+      "parameters": [
+        {
+          "title": "File IRI/Path",
+          "description": "Specify the file IRI/path where the file is located. File IRI is an attribute of a file which is in turn an attribute of an attachment or an indicator. NOTE: The file name is taken from the /tmp directory.",
+          "name": "file_iri",
+          "type": "text",
+          "visible": true,
+          "editable": true,
+          "required": true,
+          "tooltip": "Specify the file IRI/path where the file is located. File IRI is an attribute of a file which is in turn an attribute of an attachment or an indicator. NOTE: The file name is taken from the /tmp directory."
+        }
+      ],
+      "output_schema": {},
       "enabled": true
     },
     {
