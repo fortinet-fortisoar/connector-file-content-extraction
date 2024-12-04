@@ -103,7 +103,18 @@
           "tooltip": "Specify the file IRI/path where the file is located. File IRI is an attribute of a file which is in turn an attribute of an attachment or an indicator. NOTE: The file name is taken from the /tmp directory."
         }
       ],
-      "output_schema": {},
+      "output_schema": {
+        "data": {
+          "ipv4s": [],
+          "domains": []
+        },
+        "segregated_data": [
+          {
+            "value": "",
+            "ioc_type": ""
+          }
+        ]
+      },
       "enabled": true
     },
     {

@@ -1,5 +1,5 @@
 """ Copyright start
-  Copyright (C) 2008 - 2023 Fortinet Inc.
+  Copyright (C) 2008 - 2024 Fortinet Inc.
   All rights reserved.
   FORTINET CONFIDENTIAL & FORTINET PROPRIETARY SOURCE CODE
   Copyright end """
@@ -53,13 +53,15 @@ def extract_indicators(config, params, *args, **kwargs):
 
 def extract_indicators_from_file(config, params, *args, **kwargs):
     '''Extracts artifacts from extracted text'''
-    result = []
+    result = {'segregated_data': [], 'data': {}}
     extracted_text = extract_text(config, params, *args, **kwargs)
-    iocs = find_iocs(extracted_text['extracted_text'])
-    for ioc_type in ['md5s', 'urls', 'ipv4s', 'ipv6s', 'sha1s', 'sha256s', 'sha512s', 'domains']:
-        ioc_values = iocs.get(ioc_type)
-        if ioc_values:
-            result.extend({'ioc_type': ioc_type, 'value': x} for x in ioc_values)
+    iocs = find_iocs(extracted_text.get('extracted_text', ''))
+    for ioc_type, values in iocs.items():
+        if values and ioc_type in ['md5s', 'urls', 'ipv4s', 'ipv6s', 'sha1s', 'sha256s', 'sha512s', 'domains', 'email_addresses']:
+            result['data'][ioc_type] = values
+            result['segregated_data'].extend(
+                {'ioc_type': ioc_type, 'value': value} for value in values
+            )
     return result
 
 
