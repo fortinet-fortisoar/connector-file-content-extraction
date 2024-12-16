@@ -1,0 +1,26 @@
+{
+    "config": [
+        {}
+    ],
+    "extract_text": [
+        {
+            "file_iri": "/api/3/files/84821041-c6c1-4f16-a65b-81603c28476e",
+            "html_output_format": false
+        }
+    ],
+    "extract_indicators": [
+        {
+            "file_iri": "/api/3/files/84821041-c6c1-4f16-a65b-81603c28476e"
+        }
+    ],
+    "extract_indicators_from_file": [
+        {
+            "file_iri": "/api/3/files/84821041-c6c1-4f16-a65b-81603c28476e"
+        }
+    ],
+    "get_backend_config": [
+        {
+            "verbose_config": false
+        }
+    ]
+}

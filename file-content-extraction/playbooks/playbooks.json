@@ -278,7 +278,7 @@
         {
           "@type": "Workflow",
           "triggerLimit": null,
-          "name": "Extract Artifacts From File",
+          "name": "Extract Artifacts Extended",
           "aliasName": null,
           "tag": null,
           "description": "Returns a dictionary of extracted artifacts from file",
