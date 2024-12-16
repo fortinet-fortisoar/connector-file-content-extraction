@@ -1,8 +1,9 @@
-""" Copyright start
-  Copyright (C) 2008 - 2024 Fortinet Inc.
-  All rights reserved.
-  FORTINET CONFIDENTIAL & FORTINET PROPRIETARY SOURCE CODE
-  Copyright end """
+"""
+Copyright start
+MIT License
+Copyright (c) 2024 Fortinet Inc
+Copyright end
+"""
 
 from connectors.core.connector import get_logger, ConnectorError
 from connectors.cyops_utilities.builtins import download_file_from_cyops, extract_artifacts, save_file_in_env
@@ -57,7 +58,7 @@ def extract_indicators_from_file(config, params, *args, **kwargs):
     extracted_text = extract_text(config, params, *args, **kwargs)
     iocs = find_iocs(extracted_text.get('extracted_text', ''))
     for ioc_type, values in iocs.items():
-        if values and ioc_type in ['md5s', 'urls', 'ipv4s', 'ipv6s', 'sha1s', 'sha256s', 'sha512s', 'domains', 'email_addresses']:
+        if values and ioc_type in ['md5s', 'urls', 'ipv4s', 'ipv6s', 'sha1s', 'sha256s', 'sha512s', 'domains', 'email_addresses', 'mac_addresses']:
             result['data'][ioc_type] = values
             result['segregated_data'].extend(
                 {'ioc_type': ioc_type, 'value': value} for value in values
