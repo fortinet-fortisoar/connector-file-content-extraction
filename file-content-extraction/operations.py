@@ -57,6 +57,8 @@ def extract_indicators_from_file(config, params, *args, **kwargs):
     '''Extracts artifacts from extracted text'''
     result = {'segregated_data': [], 'data': {}}
     extracted_text = extract_text(config, params, *args, **kwargs)
+    if extracted_text.get('extracted_text') is None:
+        return result
     iocs = find_iocs(extracted_text.get('extracted_text', ''))
     for ioc_type, values in iocs.items():
         if values and ioc_type in ['md5s', 'urls', 'ipv4s', 'ipv6s', 'sha1s', 'sha256s', 'sha512s', 'domains', 'email_addresses', 'mac_addresses']:
