@@ -6,11 +6,12 @@ Copyright end
 """
 
 from connectors.core.connector import get_logger, ConnectorError
-from connectors.cyops_utilities.builtins import download_file_from_cyops, extract_artifacts, save_file_in_env
+from connectors.cyops_utilities.builtins import download_file_from_cyops, extract_artifacts, save_file_in_env, create_cyops_attachment
 import os
 import json
 import requests
 from ioc_finder import find_iocs
+import pandas as pd
 
 logger = get_logger('file-content-extraction')
 
@@ -66,6 +67,28 @@ def extract_indicators_from_file(config, params, *args, **kwargs):
     return result
 
 
+def create_xslx_file_from_json_data(config, params, *args, **kwargs):
+    """
+    Converts JSON into a XLSX file and creates attachment in FortiSOAR attachment module
+    :param str jsonData: The jsonData to be converted into XLSX:return: The attachment module record
+    :rtype: dict
+    """
+
+    jsonData = params['jsonData']
+    fileName = params['fileName']
+    xLSXFields = params['xLSXFields']
+    if not jsonData and fileName:
+        raise ConnectorError("%s" % "CS-CONNECTOR-UTILITY-1: Invalid input :: {0} cannot be blank or null".format('jsonData'))
+    df = pd.json_normalize(jsonData)
+    if not fileName.endswith(('.xlsx', '.xslx')):
+        fileName += '.xlsx'
+    if xLSXFields:
+        df = df[[item.strip() for item in xLSXFields.split(",")]]
+    filePath = TMP_PATH + fileName
+    df.to_excel(filePath, index=False)
+    return create_cyops_attachment(fileName, name=fileName, description='')
+
+
 def get_backend_config(config, params, *args, **kwargs):
     '''Get Tika Server Attr'''
     parser, tika_config = _set_env()
@@ -102,5 +125,6 @@ operations = {
     'extract_text': extract_text,
     'extract_indicators': extract_indicators,
     'get_backend_config': get_backend_config,
-    'extract_indicators_from_file': extract_indicators_from_file
+    'extract_indicators_from_file': extract_indicators_from_file,
+    'create_xslx_file_from_json_data': create_xslx_file_from_json_data
 }

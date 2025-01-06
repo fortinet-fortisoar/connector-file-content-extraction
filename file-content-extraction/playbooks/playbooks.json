@@ -277,144 +277,158 @@
         },
         {
           "@type": "Workflow",
+          "uuid": "7ed8593f-0ed3-4b3d-99c4-bba4ac2c9af7",
+          "collection": "/api/3/workflow_collections/2ecf139d-2979-4658-a954-90f02bc9e93d",
           "triggerLimit": null,
+          "description": "Extracts artifacts from file based on the file IRI/path that you have specified. This action uses ioc-finder library for indicators extraction.",
           "name": "Extract Artifacts Extended",
-          "aliasName": null,
-          "tag": null,
-          "description": "Returns a dictionary of extracted artifacts from file",
+          "tag": "#File Content Extraction",
+          "recordTags": [
+            "file-content-extraction"
+          ],
           "isActive": false,
           "debug": false,
           "singleRecordExecution": false,
-          "remoteExecutableFlag": false,
           "parameters": [],
           "synchronous": false,
-          "lastModifyDate": 1654743076,
-          "collection": "/api/3/workflow_collections/2ecf139d-2979-4658-a954-90f02bc9e93d",
-          "versions": [],
-          "triggerStep": "/api/3/workflow_steps/a0e42486-b942-49cb-943c-e0679b40e3e1",
+          "triggerStep": "/api/3/workflow_steps/6d91e86f-9eb7-41db-904f-aa08879fa289",
           "steps": [
             {
-              "@type": "WorkflowStep",
-              "name": "Compute results",
-              "description": null,
-              "arguments": {
-                "extraction_result": "{{vars.steps.Extract_Artifacts.data}}"
-              },
-              "status": null,
-              "top": "300",
-              "left": "125",
-              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
-              "uuid": "7b1cb3bf-6967-4f98-b12c-577fbe7ea5b8"
-            },
-            {
-              "@type": "WorkflowStep",
-              "name": "Extract Artifacts",
-              "description": null,
-              "arguments": {
-                "name": "File Content Extraction",
-                "config": "70616ece-f92a-459b-88e5-cbf1b07b37b2",
-                "params": {
-                  "file_iri": "{{vars.input.records[0].file['@id']}}"
-                },
-                "version": "1.2.0",
-                "connector": "file-content-extraction",
-                "operation": "extract_indicators",
-                "operationTitle": "Extract Artifacts",
-                "pickFromTenant": false,
-                "step_variables": []
-              },
-              "status": null,
-              "top": "165",
-              "left": "125",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
-              "uuid": "881516b0-0e0f-49ab-ba47-95c6fac0e910"
-            },
-            {
+              "uuid": "6d91e86f-9eb7-41db-904f-aa08879fa289",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
+              "status": null,
               "arguments": {
-                "route": "8c3e93c0-e407-4ad3-83e4-a912a3964193",
+                "route": "136c793a-1ffc-4633-b4ce-fcd4da214c15",
+                "title": "File Content Extraction: Extract Artifacts Extended",
                 "resources": [
-                  "indicators",
-                  "attachments"
+                  "alerts"
                 ],
                 "inputVariables": [],
                 "step_variables": {
                   "input": {
-                    "records": "{{vars.input.records}}"
+                    "records": "{{vars.input.records[0]}}"
                   }
                 },
-                "displayConditions": {
-                  "indicators": {
-                    "sort": [],
-                    "limit": 30,
-                    "logic": "AND",
-                    "filters": [
-                      {
-                        "type": "object",
-                        "field": "typeofindicator",
-                        "value": "/api/3/picklists/0162241b-f5bf-4917-a150-00e920be47bd",
-                        "_value": {
-                          "@id": "/api/3/picklists/0162241b-f5bf-4917-a150-00e920be47bd",
-                          "display": "File",
-                          "itemValue": "File"
-                        },
-                        "operator": "eq"
-                      }
-                    ]
-                  },
-                  "attachments": {
-                    "sort": [],
-                    "limit": 30,
-                    "logic": "AND",
-                    "filters": []
-                  }
-                },
-                "executeButtonText": "Execute",
-                "noRecordExecution": false,
-                "singleRecordExecution": true
+                "singleRecordExecution": false,
+                "noRecordExecution": true,
+                "executeButtonText": "Execute"
               },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
+            },
+            {
+              "uuid": "b3c4147e-bab8-4be2-b302-49f1edf6fc22",
+              "@type": "WorkflowStep",
+              "name": "Extract Artifacts Extended",
+              "description": null,
               "status": null,
-              "top": "30",
-              "left": "125",
-              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
-              "uuid": "a0e42486-b942-49cb-943c-e0679b40e3e1"
+              "arguments": {
+                "name": "File Content Extraction",
+                "config": "''",
+                "params": [],
+                "version": "1.2.0",
+                "connector": "file-content-extraction",
+                "operation": "extract_indicators_from_file",
+                "operationTitle": "Extract Artifacts Extended"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
             }
           ],
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "name": "Start -> Extract text",
-              "targetStep": "/api/3/workflow_steps/881516b0-0e0f-49ab-ba47-95c6fac0e910",
-              "sourceStep": "/api/3/workflow_steps/a0e42486-b942-49cb-943c-e0679b40e3e1",
+              "uuid": "8cee1205-8118-494b-9745-a67c0ff459f1",
               "label": null,
               "isExecuted": false,
-              "uuid": "c0ea5ca7-cf31-47f7-b4f0-886a35f21a86"
-            },
-            {
-              "@type": "WorkflowRoute",
-              "name": "Extract text -> Compute results",
-              "targetStep": "/api/3/workflow_steps/7b1cb3bf-6967-4f98-b12c-577fbe7ea5b8",
-              "sourceStep": "/api/3/workflow_steps/881516b0-0e0f-49ab-ba47-95c6fac0e910",
-              "label": null,
-              "isExecuted": false,
-              "uuid": "da1ec781-8613-4cc4-8b57-8ea3061f61e4"
+              "name": "Start-> Extract Artifacts Extended",
+              "sourceStep": "/api/3/workflow_steps/6d91e86f-9eb7-41db-904f-aa08879fa289",
+              "targetStep": "/api/3/workflow_steps/b3c4147e-bab8-4be2-b302-49f1edf6fc22"
             }
-          ],
-          "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
-          "uuid": "84dfdba4-ce4b-451d-a29e-ede8d29c9a9c",
-          "id": 515,
-          "createUser": "/api/3/appliances/57545210-2adc-472b-a24f-2df6ee8dfe63",
-          "createDate": 1653975786.063365,
-          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
-          "modifyDate": 1654743076.781116,
-          "owners": [],
-          "isPrivate": false,
-          "deletedAt": null,
-          "importedBy": [],
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "7105dd5f-3e27-4e19-b86c-67758f2862fe",
+          "collection": "/api/3/workflow_collections/2ecf139d-2979-4658-a954-90f02bc9e93d",
+          "triggerLimit": null,
+          "description": "Creates XSLX file as attachment from JSON Data.",
+          "name": "Create XSLX file as attachment from JSON Data",
+          "tag": "#File Content Extraction",
           "recordTags": [
             "file-content-extraction"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/e73e8089-f1e0-4997-9875-2c88482dd961",
+          "steps": [
+            {
+              "uuid": "e73e8089-f1e0-4997-9875-2c88482dd961",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "route": "d532f7f2-21bd-4fe4-aa13-2f6834979af0",
+                "title": "File Content Extraction: Create XSLX file as attachment from JSON Data",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "records": "{{vars.input.records[0]}}"
+                  }
+                },
+                "singleRecordExecution": false,
+                "noRecordExecution": true,
+                "executeButtonText": "Execute"
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
+            },
+            {
+              "uuid": "635143e7-b118-4146-912c-ba31ac12b063",
+              "@type": "WorkflowStep",
+              "name": "Create XSLX file as attachment from JSON Data",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "File Content Extraction",
+                "config": "''",
+                "params": {
+                  "fileName": "",
+                  "jsonData": null,
+                  "xLSXFields": ""
+                },
+                "version": "1.2.0",
+                "connector": "file-content-extraction",
+                "operation": "create_xslx_file_from_json_data",
+                "operationTitle": "Create XSLX file as attachment from JSON Data"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "uuid": "9915f336-c0e9-42ac-9c69-eac20964c4de",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Create XSLX file as attachment from JSON Data",
+              "sourceStep": "/api/3/workflow_steps/e73e8089-f1e0-4997-9875-2c88482dd961",
+              "targetStep": "/api/3/workflow_steps/635143e7-b118-4146-912c-ba31ac12b063"
+            }
           ]
         }
       ]
