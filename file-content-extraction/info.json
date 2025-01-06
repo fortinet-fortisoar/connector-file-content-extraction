@@ -182,8 +182,8 @@
           "visible": true,
           "editable": true,
           "value": "",
-          "tooltip": "Provide a comma-separated list of column names to include in the generated XLSX file. Leave blank to include all columns.",
-          "description": "Provide a comma-separated list of column names to include in the generated XLSX file. Leave blank to include all columns."
+          "tooltip": "Provide a comma-separated column names to include in the XLSX file. Leave blank to include all columns.",
+          "description": "Provide a comma-separated column names to include in the XLSX file. Leave blank to include all columns."
         }
       ],
       "enabled": true,
