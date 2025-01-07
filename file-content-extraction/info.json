@@ -18,6 +18,7 @@
       "description": "Extracts text and metadata from file based on the file IRI/path that you have specified.",
       "operation": "extract_text",
       "annotation": "extract_text",
+      "category": "investigation",
       "title": "Extract Text",
       "parameters": [
         {
@@ -52,6 +53,7 @@
       "description": "Extracts artifacts from file based on the file IRI/path that you have specified.",
       "operation": "extract_indicators",
       "annotation": "extract_indicators",
+      "category": "investigation",
       "title": "Extract Artifacts",
       "parameters": [
         {
@@ -90,6 +92,7 @@
       "description": "Extracts artifacts from file based on the file IRI/path that you have specified. This action uses ioc-finder library for indicators extraction.",
       "operation": "extract_indicators_from_file",
       "annotation": "extract_indicators_from_file",
+      "category": "investigation",
       "title": "Extract Artifacts Extended",
       "parameters": [
         {
@@ -121,6 +124,7 @@
       "description": "Get extraction backend configuration details based on the file IRI/path that you have specified.",
       "operation": "get_backend_config",
       "annotation": "get_backend_config",
+      "category": "investigation",
       "title": "Get Backend Config",
       "parameters": [
         {
@@ -141,6 +145,135 @@
         "Detectors": ""
       },
       "enabled": true
+    },
+    {
+      "title": "Create XSLX File as Attachment From JSON Data",
+      "operation": "create_xslx_file_from_json_data",
+      "annotation": "create_xslx_file_from_json_data",
+      "description": "Creates XSLX file as attachment from JSON Data provided.",
+      "parameters": [
+        {
+          "title": "File Name",
+          "type": "text",
+          "name": "fileName",
+          "required": true,
+          "visible": true,
+          "editable": true,
+          "value": "",
+          "tooltip": "Specify the file name to create.",
+          "description": "Specify the file name to create."
+        },
+        {
+          "title": "JSON Data",
+          "type": "object",
+          "name": "jsonData",
+          "required": true,
+          "visible": true,
+          "editable": true,
+          "value": null,
+          "tooltip": "Provide Uniform JSON Data to be converted to XLSX file.",
+          "description": "Provide Uniform JSON Data to be converted to XLSX file."
+        },
+        {
+          "title": "XLSX Fields",
+          "type": "text",
+          "name": "xLSXFields",
+          "required": false,
+          "visible": true,
+          "editable": true,
+          "value": "",
+          "tooltip": "Provide a comma-separated column names to include in the XLSX file. Leave blank to include all columns.",
+          "description": "Provide a comma-separated column names to include in the XLSX file. Leave blank to include all columns."
+        }
+      ],
+      "enabled": true,
+      "category": "investigation",
+      "output_schema": {
+        "id": "",
+        "@id": "",
+        "file": {
+          "id": "",
+          "@id": "",
+          "size": "",
+          "uuid": "",
+          "@type": "",
+          "assignee": "",
+          "filename": "",
+          "metadata": [],
+          "mimeType": "",
+          "thumbnail": "",
+          "uploadDate": ""
+        },
+        "name": "",
+        "type": "",
+        "uuid": "",
+        "@type": "",
+        "tasks": [],
+        "alerts": [],
+        "assets": [],
+        "owners": [],
+        "people": [],
+        "tenant": {
+          "id": "",
+          "@id": "",
+          "name": "",
+          "role": "",
+          "uuid": "",
+          "@type": "",
+          "region": "",
+          "license": "",
+          "industry": "",
+          "tenantId": "",
+          "createDate": "",
+          "createUser": "",
+          "modifyDate": "",
+          "modifyUser": "",
+          "description": "",
+          "isDedicated": "",
+          "allowRemoteMMDModification": ""
+        },
+        "@context": "",
+        "assignee": "",
+        "comments": [],
+        "conflict": "",
+        "warrooms": [],
+        "incidents": [],
+        "createDate": "",
+        "createUser": {
+          "id": "",
+          "@id": "",
+          "name": "",
+          "uuid": "",
+          "@type": "",
+          "avatar": "",
+          "userId": "",
+          "userType": "",
+          "createDate": "",
+          "createUser": "",
+          "modifyDate": "",
+          "modifyUser": ""
+        },
+        "indicators": [],
+        "modifyDate": "",
+        "modifyUser": {
+          "id": "",
+          "@id": "",
+          "name": "",
+          "uuid": "",
+          "@type": "",
+          "avatar": "",
+          "userId": "",
+          "userType": "",
+          "createDate": "",
+          "createUser": "",
+          "modifyDate": "",
+          "modifyUser": ""
+        },
+        "recordTags": [],
+        "userOwners": [],
+        "description": "",
+        "tenantRecordId": ""
+      }
     }
   ]
 }
