@@ -78,7 +78,7 @@ def create_xslx_file_from_json_data(config, params, *args, **kwargs):
 
     jsonData = params['jsonData']
     fileName = params['fileName']
-    xLSXFields = params['xLSXFields']
+    xLSXFields = params.get('xLSXFields')
     if not jsonData and fileName:
         raise ConnectorError("%s" % "CS-CONNECTOR-UTILITY-1: Invalid input :: {0} cannot be blank or null".format('jsonData'))
     df = pd.json_normalize(jsonData)
