@@ -69,6 +69,15 @@ def extract_indicators_from_file(config, params, *args, **kwargs):
     return result
 
 
+def extract_indicators_from_file(config, params, *args, **kwargs):
+    '''Extracts artifacts from extracted text'''
+    extracted_text = extract_text(config, params, *args, **kwargs)
+    if extracted_text.get('extracted_text') is None:
+        return {}
+    iocs = find_iocs(extracted_text.get('extracted_text', ''))
+    return {k: v for k, v in iocs.items() if v != [] and k not in ['attack_mitigations', 'attack_tactics', 'attack_techniques']}
+
+
 def create_xslx_file_from_json_data(config, params, *args, **kwargs):
     """
     Converts JSON into a XLSX file and creates attachment in FortiSOAR attachment module

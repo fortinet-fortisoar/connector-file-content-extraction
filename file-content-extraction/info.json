@@ -107,16 +107,32 @@
         }
       ],
       "output_schema": {
-        "data": {
-          "ipv4s": [],
-          "domains": []
-        },
-        "segregated_data": [
-          {
-            "value": "",
-            "ioc_type": ""
-          }
-        ]
+        "urls": [],
+        "xmpp_addresses": [],
+        "email_addresses_complete": [],
+        "email_addresses": [],
+        "ipv4_cidrs": [],
+        "imphashes": [],
+        "authentihashes": [],
+        "domains": [],
+        "ipv4s": [],
+        "ipv6s": [],
+        "sha512s": [],
+        "sha256s": [],
+        "sha1s": [],
+        "md5s": [],
+        "ssdeeps": [],
+        "asns": [],
+        "cves": [],
+        "registry_key_paths": [],
+        "google_adsense_publisher_ids": [],
+        "google_analytics_tracker_ids": [],
+        "bitcoin_addresses": [],
+        "monero_addresses": [],
+        "mac_addresses": [],
+        "user_agents": [],
+        "tlp_labels": [],
+        "file_paths": []
       },
       "enabled": true
     },
