@@ -89,7 +89,7 @@
       "enabled": true
     },
     {
-      "description": "Extracts artifacts from file based on the file IRI/path that you have specified. This action uses ioc-finder library for indicators extraction.",
+      "description": "This action utilizes a python library for indicator extraction from various input formats, whereas "Extract Artifacts" relies on regex for an IOC extraction.",
       "operation": "extract_indicators_from_file",
       "annotation": "extract_indicators_from_file",
       "category": "investigation",
