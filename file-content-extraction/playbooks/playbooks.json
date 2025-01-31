@@ -356,8 +356,8 @@
           "uuid": "7105dd5f-3e27-4e19-b86c-67758f2862fe",
           "collection": "/api/3/workflow_collections/2ecf139d-2979-4658-a954-90f02bc9e93d",
           "triggerLimit": null,
-          "description": "Creates XSLX file as attachment from JSON Data.",
-          "name": "Create XSLX file as attachment from JSON Data",
+          "description": "Creates XLSX file as attachment from JSON Data.",
+          "name": "Create XLSX file as attachment from JSON Data",
           "tag": "#File Content Extraction",
           "recordTags": [
             "file-content-extraction"
@@ -377,7 +377,7 @@
               "status": null,
               "arguments": {
                 "route": "d532f7f2-21bd-4fe4-aa13-2f6834979af0",
-                "title": "File Content Extraction: Create XSLX file as attachment from JSON Data",
+                "title": "File Content Extraction: Create XLSX file as attachment from JSON Data",
                 "resources": [
                   "alerts"
                 ],
@@ -398,7 +398,7 @@
             {
               "uuid": "635143e7-b118-4146-912c-ba31ac12b063",
               "@type": "WorkflowStep",
-              "name": "Create XSLX file as attachment from JSON Data",
+              "name": "Create XLSX file as attachment from JSON Data",
               "description": null,
               "status": null,
               "arguments": {
@@ -425,7 +425,7 @@
               "uuid": "9915f336-c0e9-42ac-9c69-eac20964c4de",
               "label": null,
               "isExecuted": false,
-              "name": "Start-> Create XSLX file as attachment from JSON Data",
+              "name": "Start-> Create XLSX file as attachment from JSON Data",
               "sourceStep": "/api/3/workflow_steps/e73e8089-f1e0-4997-9875-2c88482dd961",
               "targetStep": "/api/3/workflow_steps/635143e7-b118-4146-912c-ba31ac12b063"
             }
