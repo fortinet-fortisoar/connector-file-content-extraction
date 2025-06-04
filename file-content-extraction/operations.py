@@ -12,6 +12,8 @@ import json
 import requests
 from ioc_finder import find_iocs
 import pandas as pd
+from tika import initVM
+import tika.tika as tika_main
 
 logger = get_logger('file-content-extraction')
 
@@ -101,14 +103,33 @@ def get_backend_config(config, params, *args, **kwargs):
         raise ConnectorError('Error Reading Engine Config: {}'.format(exp))
 
 
+
 def _set_env():
     try:
+        jar_dir = '/opt/cyops/configs/integrations/external_dependencies'
+        os.makedirs(jar_dir, exist_ok=True)
+        tika_jar_path = os.path.abspath(os.path.join(jar_dir, 'tika-server.jar'))
+        if not os.path.isfile(tika_jar_path):
+            logger.info("Downloading tika-server.jar...")
+            tika_url = 'https://dlcdn.apache.org/tika/2.9.4/tika-server-standard-2.9.4.jar'
+            response = requests.get(tika_url, stream=True)
+            if response.status_code == 200:
+                with open(tika_jar_path, 'wb') as f:
+                    for chunk in response.iter_content(chunk_size=8192):
+                        f.write(chunk)
+                logger.info(f"Downloaded Tika server to: {tika_jar_path}")
+            else:
+                raise Exception(f"Failed to download tika-server.jar: HTTP {response.status_code}")
+        tika_main.tikaServerJar = tika_jar_path
+        initVM()
         from tika import parser
         from tika import config as tika_config
         return parser, tika_config
+
     except Exception as exp:
         logger.error('Error initiating local engine: {}'.format(exp))
         raise ConnectorError('Error initiating local engine {}'.format(exp))
+
 
 
 def _check_health(config):

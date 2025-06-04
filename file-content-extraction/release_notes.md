@@ -1,6 +1,3 @@
 #### What's Improved
 
-## Added following new actions and playbooks: 
-
-- Extract Artifacts Extended
-- Create XLSX File as Attachment From JSON Data
+-- The tika server required for file parsing will now be created by connector itself.
