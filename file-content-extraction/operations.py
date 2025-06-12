@@ -111,7 +111,7 @@ def _set_env():
         tika_jar_path = os.path.abspath(os.path.join(jar_dir, 'tika-server.jar'))
         if not os.path.isfile(tika_jar_path):
             logger.info("Downloading tika-server.jar...")
-            tika_url = 'https://10.132.255.153/connectors/deps/tika/tika-server-standard-2.9.4.jar'
+            tika_url = 'https://repo.fortisoar.fortinet.com/connectors/deps/tika/tika-server-standard-2.9.4.jar'
             response = requests.get(tika_url, stream=True, verify=False)
             if response.status_code == 200:
                 with open(tika_jar_path, 'wb') as f:
