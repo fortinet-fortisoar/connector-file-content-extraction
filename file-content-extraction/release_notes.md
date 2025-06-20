@@ -1,3 +1,3 @@
-#### What's Improved
+#### What's Enhanced
 
--- The tika server required for file parsing will now be created by connector itself.
+-- The connector now automatically creates the Tika server required for file parsing. 
