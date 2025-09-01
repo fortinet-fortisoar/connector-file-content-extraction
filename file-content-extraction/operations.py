@@ -7,6 +7,7 @@ Copyright end
 
 from connectors.core.connector import get_logger, ConnectorError
 from connectors.cyops_utilities.builtins import download_file_from_cyops, extract_artifacts, save_file_in_env, create_cyops_attachment
+from django.conf import settings
 import os
 import json
 import requests
@@ -21,12 +22,26 @@ logger = get_logger('file-content-extraction')
 TMP_PATH = '/tmp/'
 
 
+def check_file_traversal(filename):
+    working_directory = os.path.abspath(TMP_PATH)
+    file_path = os.path.join(TMP_PATH, filename)
+    requested_path = os.path.relpath(file_path, start=working_directory)
+    requested_path = os.path.normpath(os.path.join(working_directory, requested_path))
+    common_prefix = os.path.commonprefix([requested_path, working_directory])
+    if common_prefix != working_directory:
+        error_msg = f"This filepath is not accessible: {filename}"
+        logger.error(error_msg)
+        raise ConnectorError(error_msg)
+
+
 def extract_text(config, params, *args, **kwargs):
     '''
     Extracts text from file and return it as utf8 or HTML formatted
     '''
     parser, tika_config = _set_env()
     try:
+        if params.get('file_iri'):
+            check_file_traversal(params.get('file_iri'))
         if params.get('file_iri') and '/api/3/files/' not in params.get('file_iri'):
             file_path = os.path.join(TMP_PATH, params.get('file_iri'))
         else:
