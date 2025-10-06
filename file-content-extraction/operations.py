@@ -22,14 +22,13 @@ logger = get_logger('file-content-extraction')
 TMP_PATH = '/tmp/'
 
 
-def check_file_traversal(filename):
+def check_file_traversal(file_path):
     working_directory = os.path.abspath(TMP_PATH)
-    file_path = os.path.join(TMP_PATH, filename)
     requested_path = os.path.relpath(file_path, start=working_directory)
     requested_path = os.path.normpath(os.path.join(working_directory, requested_path))
     common_prefix = os.path.commonprefix([requested_path, working_directory])
     if common_prefix != working_directory:
-        error_msg = f"This filepath is not accessible: {filename}"
+        error_msg = f"This filepath is not accessible: {file_path}"
         logger.error(error_msg)
         raise ConnectorError(error_msg)
 
@@ -40,10 +39,9 @@ def extract_text(config, params, *args, **kwargs):
     '''
     parser, tika_config = _set_env()
     try:
-        if params.get('file_iri'):
-            check_file_traversal(params.get('file_iri'))
         if params.get('file_iri') and '/api/3/files/' not in params.get('file_iri'):
             file_path = os.path.join(TMP_PATH, params.get('file_iri'))
+            check_file_traversal(file_path)
         else:
             file_iri = params.get('file_iri')
             dw_file_md = download_file_from_cyops(file_iri)
