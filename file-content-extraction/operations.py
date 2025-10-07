@@ -39,7 +39,7 @@ def extract_text(config, params, *args, **kwargs):
     '''
     parser, tika_config = _set_env()
     try:
-        if params.get('file_iri') and '/api/3/files/' not in params.get('file_iri'):
+        if params.get('file_iri') and not params['file_iri'].startswith('/api/3/files/'):
             file_path = os.path.join(TMP_PATH, params.get('file_iri'))
             check_file_traversal(file_path)
         else:
